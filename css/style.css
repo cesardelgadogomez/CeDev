@@ -226,16 +226,29 @@ header nav {
   padding: 3rem;
 }
 
-.liketotalk h3,
-.liketotalk h4 {
+
+.liketotalk-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+
+.liketotalk-title h3 {
   font-size: 4rem;
+  color: var(--purple);
+  font-weight: 700;
 }
 
-.liketotalk h4 {
+.liketotalk-title h4 {
+  font-size: 3rem;
   margin-top: 2rem;
+  color: var(--purple);
+  font-weight: 500;
+  line-height: 1rem;
 }
 
-.liketotalk p {
+.liketotalk-texto {
   font-size: 1.1rem;
   padding-bottom: 2rem;
 }
@@ -374,3 +387,19 @@ footer {
     gap: 1.5rem;
   }
 }
+
+@media screen and (max-width: 380px) {
+  .liketotalk-title h3 {
+    font-size: 2.5rem;
+  }
+  
+  .liketotalk-title h4 {
+    font-size: 2.5rem;
+    line-height: 1rem;
+  }
+
+  .welcome-banner {
+    padding-inline: 3rem;
+  }
+}
+
