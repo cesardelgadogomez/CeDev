@@ -300,6 +300,36 @@ footer {
   color: #bbbfff;
 }
 
+/*UNDER CONSTRUCTION*/
+
+.under-construction {
+  padding-block: 2rem;
+}
+
+.under-construction-title {
+  padding-inline: 2rem;
+}
+
+.under-construction-title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--purple);
+}
+
+.under-construction-title h6 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--purple);
+}
+
+.under-construction-img img {
+  width: 100%;
+}
+
+/*MEDIA QUERIES*/
+
 @media screen and (max-width: 685px) {
   .abrir-menu,
   .cerrar-menu {
