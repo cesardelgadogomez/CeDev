@@ -83,11 +83,11 @@ header nav {
   padding: 4rem;
 }
 
-.saludo {
+.greeting {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  text-align:  right;
 }
 
 .greeting h3 {
