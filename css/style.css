@@ -343,6 +343,13 @@ footer {
 
 /*MEDIA QUERIES*/
 
+
+@media screen and (max-width: 767px) {
+  .container-cards .row {
+    gap: 1rem;
+  }
+}
+
 @media screen and (max-width: 685px) {
   .abrir-menu,
   .cerrar-menu {
@@ -387,6 +394,7 @@ footer {
     gap: 1.5rem;
   }
 }
+
 
 @media screen and (max-width: 410px) {
   .welcome-banner {
