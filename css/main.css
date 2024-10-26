@@ -1,0 +1,229 @@
+/*** RESET ***/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*** HOME ***/
+
+.index {
+  width: 100%;
+  height: 100dvh;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 50%;
+}
+
+.right > div {
+  display: grid;
+  place-content: center;
+}
+
+.menu-right {
+  position: relative;
+  height: 50dvh;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(0deg, black, rgb(29, 29, 29));
+  z-index: 1;
+}
+
+.quien-soy,
+.habilidades,
+.proyectos,
+.contacto {
+  display: flex;
+  flex-direction: column;
+  opacity: .1;
+}
+
+.quien-soy:hover {
+  opacity: 1;
+  color: rgb(255, 244, 146);
+  transition: all 500ms;
+}
+
+.quien-soy i {
+  font-size: 6rem;
+}
+
+.quien-soy p {
+  font-size: 2rem;
+  line-height: 0.1rem;
+  font-weight: 700;
+  font-family: "DM Sans", system-ui;
+}
+
+.quien-soy:hover::before{
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 150%;
+  background-color: rgb(255, 230, 0);
+  box-shadow: 0 0 50px rgb(248, 162, 3);
+  animation: animate 4s linear infinite;
+  z-index: -1;
+}
+
+.quien-soy:hover::after{
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background: linear-gradient(90deg, black, rgb(29, 29, 29));
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.habilidades:hover {
+  opacity: 1;
+  color: rgb(95, 128, 238);
+  transition: all 500ms;
+}
+
+.habilidades i {
+  font-size: 6rem;
+}
+
+.habilidades p {
+  font-size: 2rem;
+  line-height: 0.1rem;
+  font-weight: 700;
+  font-family: "DM Sans", system-ui;
+}
+
+.habilidades:hover::before{
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 150%;
+  background-color: rgb(23, 69, 219);
+  box-shadow: 0 0 50px rgb(3, 60, 248);
+  animation: animate 4s linear infinite;
+  z-index: -1;
+}
+
+.habilidades:hover::after{
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background: linear-gradient(90deg, black, rgb(29, 29, 29));
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.proyectos:hover {
+  opacity: 1;
+  color: rgb(255, 115, 127);
+  transition: all 500ms;
+}
+
+.proyectos i {
+  font-size: 6rem;
+}
+
+.proyectos p {
+  font-size: 2rem;
+  line-height: 0.1rem;
+  font-weight: 700;
+  font-family: "DM Sans", system-ui;
+}
+
+.proyectos:hover::before{
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 150%;
+  background-color: rgb(248, 24, 24);
+  box-shadow: 0 0 50px rgb(185, 4, 4);
+  animation: animate 4s linear infinite;
+  z-index: -1;
+}
+
+.proyectos:hover::after{
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background: linear-gradient(90deg, black, rgb(29, 29, 29));
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.contacto:hover {
+  opacity: 1;
+  color: rgb(185, 184, 184);
+  transition: all 500ms;
+}
+
+.contacto i {
+  font-size: 6rem;
+}
+
+.contacto p {
+  font-size: 2rem;
+  line-height: 0.1rem;
+  font-weight: 700;
+  font-family: "DM Sans", system-ui;
+}
+
+.contacto:hover::before{
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 150%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 50px rgb(255, 255, 255);
+  animation: animate 4s linear infinite;
+  z-index: -1;
+}
+
+.contacto:hover::after{
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background: linear-gradient(90deg, black, rgb(29, 29, 29));
+  border-radius: 16px;
+  z-index: -1;
+}
+
+@keyframes animate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
