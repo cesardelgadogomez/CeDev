@@ -71,13 +71,19 @@ li {
   opacity: .1;
 }
 
-
-/* .quien-soy,
+.quien-soy,
 .habilidades {
   animation:slide-in-top .5s cubic-bezier(.25,.46,.45,.94) both;
 }
 
-@keyframes slide-in-top{0%{transform:translateY(-1000px);opacity:0}100%{transform:translateY(0);opacity:1}} */
+@keyframes slide-in-top{0%{transform:translateY(-1000px)}100%{transform:translateY(0)}}
+
+.proyectos,
+.contacto {
+  animation:slide-in-bottom .8s cubic-bezier(.25,.46,.45,.94) both
+}
+
+@keyframes slide-in-bottom{0%{transform:translateY(1000px)}100%{transform:translateY(0)}}
 
 .quien-soy:hover {
   opacity: 1;
@@ -236,7 +242,7 @@ li {
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 800px) {
   .left img {
     width: 70%;
   }
@@ -257,6 +263,24 @@ li {
     justify-content: center;
     padding: .5rem;
   }
+
+  .quien-soy {
+    animation:slide-in-right .5s cubic-bezier(.25,.46,.45,.94) both
+  }
+  
+  .habilidades{
+    animation:slide-in-right .7s cubic-bezier(.25,.46,.45,.94) both
+  }
+
+  .proyectos {
+    animation:slide-in-right .9s cubic-bezier(.25,.46,.45,.94) both
+  }
+
+  .contacto {
+    animation:slide-in-right 1.1s cubic-bezier(.25,.46,.45,.94) both
+  }
+
+  @keyframes slide-in-right{0%{transform:translateX(1000px)}100%{transform:translateX(0)}}
 
   .menu-right {
     height: 25dvh;
