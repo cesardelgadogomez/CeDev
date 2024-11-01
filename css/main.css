@@ -1,6 +1,13 @@
 /*** RESET ***/
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+  --fuente-titulos: "DM Sans", sans-serif;
+  --fuente-parrafos: "Nunito Sans", sans-serif;
+  --fuente-especial: "Bebas Neue", sans-serif;
+}
 
 
 * {
@@ -37,6 +44,12 @@ li {
   align-items: center;
   justify-content: center;
 }
+
+.left img {
+  animation:puff-in-center 1s cubic-bezier(.47,0.000,.745,.715) both
+}
+
+@keyframes puff-in-center{0%{transform:scale(2);filter:blur(4px);opacity:0}100%{transform:scale(1);filter:blur(0);opacity:1}}
 
 .right {
   display: grid;
@@ -353,60 +366,293 @@ li {
 
 /*** NAVBAR ***/
 
-#header {
+
+nav {
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  top: 0px;
+  background-color: rgb(14, 14, 14);
+  height: 100dvh;
+  padding-top: 2rem;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75);
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s;
+}
+
+.nav-visible {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.menu li {
+  width: 100%;
+  padding: 1rem 3rem;
+  transition: all .3s;
+}
+
+.menu li:hover {
+  background-color: rgb(77, 77, 77);
+}
+
+.open-menu,
+.close-menu {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.close-menu {
+  padding-left: 2.5rem;
+  color: white;
+}
+
+.open-menu {
+  color: white;
+  align-self: center;
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(12, 12, 12);
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  padding-block: 1rem;
+}
+
+.header img {
+  height: 4rem;
+  margin-left: calc(50% - 10rem);
+  animation:bounce-in-right 1.1s both;
+  transition: all .3s;
+}
+
+@keyframes bounce-in-right{0%{transform:translateX(600px);animation-timing-function:ease-in;opacity:0}38%{transform:translateX(0);animation-timing-function:ease-out;opacity:1}55%{transform:translateX(68px);animation-timing-function:ease-in}72%{transform:translateX(0);animation-timing-function:ease-out}81%{transform:translateX(32px);animation-timing-function:ease-in}90%{transform:translateX(0);animation-timing-function:ease-out}95%{transform:translateX(8px);animation-timing-function:ease-in}100%{transform:translateX(0);animation-timing-function:ease-out}}
+
+.header img:hover {
+  scale: 1.1;
+}
+
+
+/**** MAIN ****/
+
+.container {
+  min-height: 100dvh;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-section {
+  width: 100%;
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.mensaje {
+  font-family: var(--fuente-especial);
+  font-size: 6rem;
+  line-height: 6rem;
+  font-weight: 500;
+  color: rgb(145, 144, 144);
+}
+
+.mensaje > del {
+  font-family: var(--fuente-especial);
+}
+
+.mensaje-1 {
+  animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both
+}
+
+.mensaje-2 {
+  animation:text-focus-in 2s cubic-bezier(.55,.085,.68,.53) both
+}
+
+.mensaje-3 {
+  animation:text-focus-in 3s cubic-bezier(.55,.085,.68,.53) both
+}
+
+.mensaje-4 {
+  animation:text-focus-in 4s cubic-bezier(.55,.085,.68,.53) both
+}
+
+@keyframes text-focus-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+
+.second-section {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 1rem 2rem;
+  width: 100%;
 }
 
-/* Estilo del checkbox oculto */
-#menuToggle {
-  display: none;
+.imagen-cesar,
+.bio1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
 }
 
-/* Estilo del navbar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px; /* Fuera de la vista */
-  width: 250px;
-  height: 100%;
-  padding-top: 3rem;
-  padding-left: 1rem;
-  background: #343a40;
-  transition: left 0.3s;
-  z-index: 1000;
+.imagen-cesar img{
+  width: 50%;
 }
 
-/* Mostrar el sidebar cuando el checkbox está marcado */
-#menuToggle:checked + .sidebar {
-  left: 0; /* Visible */
+.bio1 {
+  display: flex;
+  flex-direction: column;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
 }
 
-/* Estilo para el contenido del navbar */
-.sidebar a {
-  display: block;
-  padding: 15px;
-  color: white;
-  text-decoration: none;
+.bio1 h3 {
+  font-family: var(--fuente-titulos);
+  font-size: 3rem;
+  font-weight: 900;
 }
 
-/* Efecto hover */
-.sidebar a:hover {
-  background: #495057;
+.bio1 p {
+  font-family: var(--fuente-parrafos);
+  margin-top: 1rem;
+}
+
+.third-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-image: url("../img/fonto-cesar-estudiantes-bn.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(248, 237, 176);
+  padding-bottom: 3rem;
+}
+
+.ts-titulo {
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.ts-titulo h3 {
+  font-family: var(--fuente-especial);
+  font-size: 6rem;
+}
+
+.ts-titulo h2 {
+  font-family: var(--fuente-especial);
+  font-size: 6rem;
+  line-height: 4rem;
+}
+
+.bio2 {
+  display: flex;
+  min-height: 25dvh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: first baseline;
+  margin-top: 5rem;
+  gap: 2rem;
+}
+
+.bio2-dropdown {
+  width: 25%;
+  background-color: rgb(250, 214, 10);
   cursor: pointer;
+  border-radius: 1rem;
 }
 
-/* Botón para abrir el menú */
-.menu-button {
-  position: relative;
-  background: #000000;
-  color: white;
-  border-radius: 10px;
-  padding: 10px 15px;
-  cursor: pointer;
-  margin: 20px;
-  top: 15px;
-  z-index: 1001;
+.bio2_acordeon {
+  font-size: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding: .5rem 1rem;
+  border-radius: 1rem 1rem 0 0 ;
+}
+
+.bio2-dropdown p {
+  background-color: rgb(253, 247, 227);
+  padding: .5rem 1rem;
+  border-radius: 0 0 1rem 1rem;
+  font-size: var(--fuente-parrafos);
+}
+
+details summary::marker {
+  content: "+ ";
+}
+
+
+details[open] summary {
+  background-color: rgb(223, 163, 0);
+  transition: all .3s ease-in-out;
+}
+
+details[open] summary::marker {
+  content: "— ";
+}
+
+
+
+/*** FOOTER ***/
+
+.footer {
+  width: 100%;
+  background-color: rgb(14, 14, 14);
+  height: fit-content;  
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-imagen img {
+  height: 3rem;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  padding: 1rem 0;
+}
+
+.info-left {
+  color: rgb(105, 105, 105);
+}
+
+.info-right {
+  display: flex;
+  font-size: 1.1rem;
+  gap: 3rem;
+  
+}
+
+.info-right a {
+  transition: all .3s;
+}
+
+.info-right a:hover {
+  color: yellow;
+  scale: 1.2;
 }
