@@ -463,10 +463,12 @@ main {
 
 .first-section {
   width: 100%;
+  height: 90dvh;
   padding-block: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: left;
 }
 
@@ -542,10 +544,10 @@ main {
   width: 100%;
   height: auto;
   background-image: url("../img/fonto-cesar-estudiantes-bn.png");
-  background-position: center center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgb(248, 237, 176);
+  background-color: rgb(253, 247, 213);
   padding-bottom: 3rem;
 }
 
@@ -567,7 +569,7 @@ main {
 
 .bio2 {
   display: flex;
-  min-height: 25dvh;
+  min-height: 10dvh;
   flex-direction: row;
   justify-content: center;
   align-items: first baseline;
@@ -611,7 +613,171 @@ details[open] summary::marker {
   content: "— ";
 }
 
+.servicios {
+  width: 100%;
+  padding: 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
 
+.servicios-title {
+  font-size: 5rem;
+  font-family: var(--fuente-especial);
+  text-align: center;
+}
+
+.servicio1,
+.servicio3 {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+}
+
+.servicio2 {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+  width: 100%;
+}
+
+
+.servicio1-info,
+.servicio2-info,
+.servicio3-info {
+  width: 33%;
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.servicio1-info h3,
+.servicio2-info h3,
+.servicio3-info h3 {
+  font-family: var(--fuente-titulos);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.servicio-foto {
+  width: 33%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.servicio1-foto1 {
+  background-image: url("../img/tipos-de-logotipos.jpg");
+}
+
+.servicio1-foto2 {
+  background-image: url("../img/1434.jpg");
+}
+
+.servicio2-foto1 {
+  background-image: url("../img/consejos-diseño-flyers.jpg");
+}
+
+.servicio2-foto2 {
+  background-image: url("../img/PORTADA-DE-ARTICULO-VOLANTES-QUE-VENDEN-1536x922.png");
+}
+
+.servicio3-foto1 {
+  background-image: url("../img/diseño-web-1.jpg");
+}
+
+.servicio3-foto2 {
+  background-image: url("../img/diseño-web-2.jpg");
+}
+
+/*** HABILIDADES PRUEBA ***/
+
+.skills-container {
+  width: 80%;
+  max-width: 600px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.skill {
+  margin: 15px 0;
+}
+
+.skill-label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.skill-bar {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  width: 0;
+  border-radius: 10px;
+}
+
+/* Animaciones para cada barra */
+@keyframes fillCorel {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes fillIllustrator {
+  from { width: 0; }
+  to { width: 50%; }
+}
+
+@keyframes fillPhotoshop {
+  from { width: 0; }
+  to { width: 50%; }
+}
+
+@keyframes fillFilmora {
+  from { width: 0; }
+  to { width: 80%; }
+}
+
+@keyframes fillVSC {
+  from { width: 0; }
+  to { width: 70%; }
+}
+
+.corel .bar-fill {
+  animation: fillCorel 2s ease forwards;
+}
+
+.illustrator .bar-fill {
+  animation: fillIllustrator 2s ease forwards;
+}
+
+.photoshop .bar-fill {
+  animation: fillPhotoshop 2s ease forwards;
+}
+
+.filmora .bar-fill {
+  animation: fillFilmora 2s ease forwards;
+}
+
+.vsc .bar-fill {
+  animation: fillVSC 2s ease forwards;
+}
 
 /*** FOOTER ***/
 

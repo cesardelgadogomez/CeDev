@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CeDev - Diseñador gráfico | Desarrollador web Frontend</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="shortcut icon" href="./img/CeDev-icon.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/main.css">
@@ -34,10 +35,10 @@
     
     <main>
       <section class="first-section">
-        <div class="mensaje mensaje-1">LA MEJOR MANERA</div>
-        <div class="mensaje mensaje-2">DE PREDECIR</div>
-        <div class="mensaje mensaje-3">EL FUTURO</div>
-        <div class="mensaje mensaje-4">ES CREÁNDOLO</div>
+        <h1 class="mensaje mensaje-1">LA MEJOR MANERA</h1>
+        <h1 class="mensaje mensaje-2">DE PREDECIR</h1>
+        <h1 class="mensaje mensaje-3">EL FUTURO</h1>
+        <h1 class="mensaje mensaje-4">ES CREÁNDOLO</h1>
       </section>
       <section class="second-section">
         <div class="imagen-cesar">
@@ -52,24 +53,24 @@
         </div>
       </section>
       <section class="third-section">
-        <div class="ts-titulo">
+        <div class="ts-titulo" data-aos="fade-up" data-aos-duration="2000">
           <h3>¿QUÉ ME</h3>
           <h2>CARACTERIZA</h2>
         </div>
         <div class="bio2">
-          <details class="bio2-dropdown">
+          <details class="bio2-dropdown" data-aos="flip-left">
 
             <summary class="bio2_acordeon">Lo que hago</summary>
             <p>Me dedico a brindar asesoramientos sobre identidad corporativa, para que mis clientes tengan un posicionamiento de marca inicial, de acuerdo a los estándares gráficos del mercado y lograr un impacto positivo en sus clientes fijos y potenciales.</p>
           </details>
     
-          <details class="bio2-dropdown">
+          <details class="bio2-dropdown" data-aos="flip-left">
     
             <summary class="bio2_acordeon">Lo que soy</summary>
             <p>Soy una persona que le encanta compartir su conocimiento con otros, brindando soluciones gráficas de cualquier tipo. Asimismo, me encanta aprender cada día algo nuevo, todo con tal de mejorar de manera integral.</p>
           </details>
     
-          <details class="bio2-dropdown">
+          <details class="bio2-dropdown" data-aos="flip-left">
     
             <summary class="bio2_acordeon">Lo que quiero llegar a ser</summary>
             <p>Quiero ser un referente tanto del diseño gráfico como del diseño web, integrando mis conocimientos en ambas áreas y alcanzando mercados internacionales por mi calidad, eficiencia y profesionalismo.</p>
@@ -78,10 +79,43 @@
         </div>
       </section>
       <section class="servicios">
-        <div class="servicio1"></div>
-        <div class="servicio2"></div>
-        <div class="servicio3"></div>
-        <div class="servicio4"></div>
+
+        <h2 class="servicios-title" data-aos="zoom-in">
+          MIS SERVICIOS
+        </h2>
+
+        <div class="servicio1" data-aos="flip-left">
+          <div class="servicio1-info">
+            <h3>
+              CREACIÓN DE LOGOS
+            </h3>
+            <p>He tenido la gran fortuna de darle una cara a los negocios de nuevos emprendedores, así como renovar la imagen de muchas empresas consolidadas en el mercado. Procuro seguir los estándares del mercado, tratando que los logos que diseño tengan no solo impacto visual, sino también que cumplan con los requerimientos mínimos de creación de marca y perdurabilidad en el tiempo.</p>
+          </div>
+          <div class="servicio-foto servicio1-foto1"></div>
+          <div class="servicio-foto servicio1-foto2"></div>
+        </div>
+
+        <div class="servicio2" data-aos="flip-right">
+          <div class="servicio2-info">
+            <h3>
+              DISEÑO DE PIEZAS GRÁFICAS
+            </h3>
+            <p>Con más de 14 años de experiencia, he trabajado en diversas agencias y litografías, ampliando mi repertorio de conocimientos sobre piezas gráficas digitales e impresas. Mi mayor énfasis está en generar diseños frescos que sepan representar el ADN de mis clientes, así como también plasmar la intención comunicacional de lo que se quiere transmitir.</p>
+          </div>
+          <div class="servicio-foto servicio2-foto1"></div>
+          <div class="servicio-foto servicio2-foto2"></div>
+        </div>
+
+        <div class="servicio3" data-aos="flip-left">
+          <div class="servicio3-info">
+            <h3>
+              DESARROLLO WEB FRONTEND
+            </h3>
+            <p>Esta es mi incursión más nueva y a la que le estoy poniendo todo mi empeño. Implemento toda mi experiencia en diseño gráfico para crear entornos web agradables e impactantes visualmente. Constantemente estoy puliendo mi técnica para saber cuáles son las últimas tendencias de desarrollo de páginas web, para así ampliar mi catálogo de servicios web. Mi mayor aspiración es adquirir la competencia de Desarrollador Web Fullstack. Mientras tanto, me preparo para ser el mejor Front.</p>
+          </div>
+          <div class="servicio-foto servicio3-foto1"></div>
+          <div class="servicio-foto servicio3-foto2"></div>
+        </div>
       </section>
       <section class="explora">
         <div class="explora-habilidades"></div>
@@ -109,6 +143,10 @@
     
   </div>
   
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/main.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
