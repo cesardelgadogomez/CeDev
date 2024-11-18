@@ -475,7 +475,7 @@ main {
 .mensaje {
   font-family: var(--fuente-especial);
   font-size: 6rem;
-  line-height: 6rem;
+  line-height: 4rem;
   font-weight: 500;
   color: rgb(145, 144, 144);
 }
@@ -516,8 +516,13 @@ main {
   flex: 1;
 }
 
-.imagen-cesar img{
-  width: 50%;
+.imagen-cesar {
+  width: 100%;
+  height: auto;
+  background-image: url("../img/cesar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
 }
 
 .bio1 {
@@ -544,7 +549,7 @@ main {
   width: 100%;
   height: auto;
   background-image: url("../img/fonto-cesar-estudiantes-bn.png");
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(253, 247, 213);
@@ -692,7 +697,184 @@ details[open] summary::marker {
   background-image: url("../img/diseño-web-2.jpg");
 }
 
+.explora {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 6rem 4rem;
+  gap: 2rem;
+  background-color: rgb(253, 247, 213);
+  background-image: url("../img/fonto-cesar-estudiantes-bn2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(253, 247, 213);
+}
+
+.explora-titulo {
+  flex: 1;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.explora-titulo h2 {
+  font-size: 6rem;
+  line-height: 5rem;
+  font-family: var(--fuente-especial);
+  text-align: center;
+}
+
+.explora-contenido {
+  flex: 1;
+}
+
+.explora-habilidades {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.explora-habilidades h3 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.explora-botones {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  gap: 3rem;
+}
+
+.explora-botones a {
+  color: black;
+  cursor: pointer;
+  position: relative;
+}
+
+.explora-botones a::after {
+  content: "";
+  background-color :rgb(68, 29, 0);
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.explora-botones a:hover::after {
+  opacity: 1;
+}
+
+.explora-botones a:hover {
+  color: rgb(68, 29, 0);
+}
+
+
 /*** HABILIDADES PRUEBA ***/
+
+.section-1 {
+  width: 100%;
+  height: 60dvh;
+  padding: 4rem 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.typewriter {
+  font-family: var(--fuente-especial);
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+.typewriter::after {
+  content: '';
+  display: inline-block;
+  width: 2px; 
+  height: .8em; 
+  background-color: #000000;
+  animation: blink 0.7s step-end infinite;
+  vertical-align: center;
+  margin-left: 2px; 
+}
+
+@keyframes blink {
+  from, to {
+      background-color: transparent;
+  }
+  50% {
+      background-color: #000000;
+  }
+}
+
+.formacion-academica {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  background-color: #b0bcfd;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-titulo,
+.fa-instituciones {
+  flex: 1;
+}
+
+.fa-titulo h3 {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 6rem;
+  line-height: 5rem;
+  padding-block: 3rem;
+  padding-left: 4rem;
+}
+
+.fa-instituciones {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #768afd;
+}
+
+.fa-instituciones-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.inst-imagen {
+  width: 30%;
+  height: 6rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inst-imagen-1 {
+  background-image: url("../img/logo-fadp.png");
+}
+
 
 .skills-container {
   width: 80%;
@@ -728,7 +910,7 @@ h1 {
 
 .bar-fill {
   height: 100%;
-  background-color: #4CAF50;
+  background-color: #4c66f8;
   width: 0;
   border-radius: 10px;
 }
@@ -757,26 +939,6 @@ h1 {
 @keyframes fillVSC {
   from { width: 0; }
   to { width: 70%; }
-}
-
-.corel .bar-fill {
-  animation: fillCorel 2s ease forwards;
-}
-
-.illustrator .bar-fill {
-  animation: fillIllustrator 2s ease forwards;
-}
-
-.photoshop .bar-fill {
-  animation: fillPhotoshop 2s ease forwards;
-}
-
-.filmora .bar-fill {
-  animation: fillFilmora 2s ease forwards;
-}
-
-.vsc .bar-fill {
-  animation: fillVSC 2s ease forwards;
 }
 
 /*** FOOTER ***/

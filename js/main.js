@@ -1,3 +1,5 @@
+//Menú responsive
+
 const abrirMenu = document.querySelector("#open-menu");
 const cerrarMenu = document.querySelector("#close-menu");
 const nav = document.querySelector("nav")
@@ -9,6 +11,25 @@ abrirMenu.addEventListener("click", () => {
 cerrarMenu.addEventListener("click", () => {
   nav.classList.remove("nav-visible");
 })
+
+
+
+//Typewritter
+
+const text = "NUNCA ES TARDE PARA EMPEZAR. LO QUE IMPORTA ES QUE COMIENCES.";
+const typewriter = document.getElementById('typewriter');
+let index = 0;
+
+function typeEffect() {
+  if (index < text.length) {
+    typewriter.textContent += text[index];
+    index++;
+    setTimeout(typeEffect, 90); // Ajusta la velocidad del efecto
+  }
+}
+// Inicia el efecto
+typeEffect();
+
 
 //Habilidades
 
@@ -26,10 +47,15 @@ function isInViewport(element) {
 function activateAnimations() {
   const skillsContainer = document.getElementById('skills');
   if (isInViewport(skillsContainer)) {
-    skillsContainer.classList.add('animate');
     skillsContainer.style.opacity = 1; // Mostrar la sección al ser visible en el scroll
+    const bars = document.querySelectorAll('.bar-fill');
+    bars.forEach(bar => {
+      const animation = bar.getAttribute('data-animation');
+      bar.style.animation = animation; // Activar animación para cada barra
+    });
     window.removeEventListener('scroll', activateAnimations); // Remover evento después de activación
   }
 }
 
+// Agregar evento de scroll
 window.addEventListener('scroll', activateAnimations);
