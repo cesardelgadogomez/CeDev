@@ -59,3 +59,23 @@ function activateAnimations() {
 
 // Agregar evento de scroll
 window.addEventListener('scroll', activateAnimations);
+
+
+//Animación de tecnologías
+
+function activateCircles() {
+  const techContainer = document.getElementById('technologies');
+  if (isInViewport(techContainer)) {
+    techContainer.style.opacity = 1;
+    const circles = document.querySelectorAll('.circle');
+    circles.forEach(circle => {
+      const percentage = circle.getAttribute('data-percentage');
+      const progress = circle.querySelector('.progress');
+      const offset = 314 - (314 * percentage) / 100;
+      progress.style.strokeDashoffset = offset; // Aquí se anima cada círculo
+    });
+    window.removeEventListener('scroll', activateCircles);
+  }
+}
+
+window.addEventListener('scroll', activateCircles);
