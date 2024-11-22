@@ -1062,6 +1062,31 @@ details[open] summary::marker {
 
 /*** MEDIA QUERIES ***/
 
+@media screen and (max-width: 1080px) {
+
+  .skills-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 3rem;
+    gap: 3rem;
+  }
+  
+  .skills-container {
+    width: 80%;
+  }
+  
+
+  .tech-container {
+    width: 80%;
+  }
+  
+  
+}
+
+
+
+
 
 @media screen and (max-width: 1040px) {
 

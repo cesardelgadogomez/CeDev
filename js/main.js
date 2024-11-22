@@ -27,13 +27,13 @@ function typeEffect() {
     setTimeout(typeEffect, 90); // Ajusta la velocidad del efecto
   }
 }
-// Inicia el efecto
+
 typeEffect();
 
 
 //Habilidades
 
-function isInViewport(element) {
+/* function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&
@@ -78,4 +78,57 @@ function activateCircles() {
   }
 }
 
+window.addEventListener('scroll', activateCircles); */
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Función para activar animaciones de las barras de habilidades
+function activateAnimations() {
+  const skillsContainer = document.getElementById('skills');
+  if (isInViewport(skillsContainer)) {
+    skillsContainer.style.opacity = 1; // Mostrar la sección al ser visible en el scroll
+    const bars = document.querySelectorAll('.bar-fill');
+    bars.forEach(bar => {
+      const animation = bar.getAttribute('data-animation');
+      bar.style.animation = animation; // Activar animación para cada barra
+    });
+    // Remover eventos después de activación
+    window.removeEventListener('scroll', activateAnimations);
+    window.removeEventListener('resize', activateAnimations);
+  }
+}
+
+// Función para activar animaciones de los círculos de tecnologías
+function activateCircles() {
+  const techContainer = document.getElementById('technologies');
+  if (isInViewport(techContainer)) {
+    techContainer.style.opacity = 1;
+    const circles = document.querySelectorAll('.circle');
+    circles.forEach(circle => {
+      const percentage = circle.getAttribute('data-percentage');
+      const progress = circle.querySelector('.progress');
+      const offset = 314 - (314 * percentage) / 100;
+      progress.style.strokeDashoffset = offset; // Aquí se anima cada círculo
+    });
+    // Remover eventos después de activación
+    window.removeEventListener('scroll', activateCircles);
+    window.removeEventListener('resize', activateCircles);
+  }
+}
+
+// Agregar eventos para ambas secciones
+window.addEventListener('scroll', activateAnimations);
+window.addEventListener('resize', activateAnimations);
+document.addEventListener('DOMContentLoaded', activateAnimations);
+
 window.addEventListener('scroll', activateCircles);
+window.addEventListener('resize', activateCircles);
+document.addEventListener('DOMContentLoaded', activateCircles);
