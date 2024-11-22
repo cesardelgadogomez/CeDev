@@ -1304,8 +1304,46 @@ details[open] summary::marker {
     height: 18.75vh;
   }
 
+  .typewriter {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+
+  .fa-instituciones  {
+    padding-inline: 1rem;
+    align-items: center;
+  }
+
+  .fa-titulo h3 {
+    font-size: 2.5rem;
+  }
+
   .inst-info {
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
   }
+
+  .inst-img {
+    margin-left: calc(50% - 60px);
+  }
+
+  .inst-texto {
+    text-align: left;
+  }
+
+  .skills-section,
+  .specialities {
+    padding-inline: 1rem;
+  }
   
+  .spec-title h2,
+  .languages h2 {
+    font-size: 2rem;
+  }
+
+  .spec-icons {
+    gap: 1.5rem;
+  }
 }
