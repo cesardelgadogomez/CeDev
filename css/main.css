@@ -1080,13 +1080,13 @@ details[open] summary::marker {
   .tech-container {
     width: 80%;
   }
-  
+
+  .fa-titulo h3 {
+    font-size: 4.5rem;
+    line-height: 4rem;
+  }
   
 }
-
-
-
-
 
 @media screen and (max-width: 1040px) {
 
@@ -1117,6 +1117,38 @@ details[open] summary::marker {
   .bio1 {
     padding-inline: 4rem;
     grid-area: bio1;
+  }
+  
+}
+
+
+@media screen and (max-width: 940px) {
+
+  .formacion-academica {
+    flex-direction: column;
+    
+  }
+
+  .fa-titulo h3 {
+    padding-inline: 2rem;
+    text-align: center;
+  }
+  
+
+  .fa-instituciones {
+    justify-content: center;
+  }
+
+  .inst-img {
+    flex: .5;
+  }
+
+  .inst-info img{
+    height: 3.5rem;
+  }
+
+  .inst-texto {
+    flex: 1.2;
   }
   
 }
@@ -1193,8 +1225,45 @@ details[open] summary::marker {
     width: 500px;
     height: 80%;
   }
+
+  .typewriter {
+    font-size: 5rem;
+    line-height: 4.5rem;
+  }
+  
   
 }
+
+@media screen and (max-width: 545px) {
+
+  .spec-title {
+    text-align: center;
+  }
+
+  .spec-icons {
+    flex-wrap: wrap;
+  }
+
+  .languages {
+    flex-direction: column;
+  }
+
+  .footer-info {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  
+  .info-left {
+    color: rgb(105, 105, 105);
+  }
+  
+  .info-right {
+    padding-top: 1rem;
+    justify-content: center; 
+  }
+}
+
+
 
 @media screen and (max-width: 500px) {
 
@@ -1233,6 +1302,10 @@ details[open] summary::marker {
     width: 100vw;
     height: 18.75dvh;
     height: 18.75vh;
+  }
+
+  .inst-info {
+    gap: 1rem;
   }
   
 }
