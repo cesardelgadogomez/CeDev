@@ -451,7 +451,7 @@ main {
   flex-direction: column;
   width: 100%;
   height: auto;
-  background-image: url("../img/fonto-cesar-estudiantes-bn.png");
+  background-image: url("../img/fonto-cesar-estudiantes-bn2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -607,7 +607,7 @@ details[open] summary::marker {
   padding: 6rem 4rem;
   gap: 2rem;
   background-color: rgb(253, 247, 213);
-  background-image: url("../img/fonto-cesar-estudiantes-bn2.png");
+  background-image: url("../img/fonto-cesar-estudiantes-bn.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1015,6 +1015,168 @@ details[open] summary::marker {
   width: 4rem;
 }
 
+/*** PROYECTOS ***/
+
+.mensaje-proyectos {
+  width: 100%;
+  padding-block: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mensaje-proyectos h2,
+.mensaje-proyectos h1 {
+  font-family: var(--fuente-especial);
+  font-size: 6rem;
+}
+
+.mensaje-proyectos h1 {
+  line-height: 5rem;
+}
+
+.proyectos-logos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-imagenes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  width: 70%;
+  padding: 2rem;
+  height: 400px;
+  transition: 0.5s;
+  background-color: rgb(255, 163, 163);
+}
+
+.box {
+  background: var(--image);
+  background-position: center;
+  background-size: cover;
+  transition: .5s;
+  border-radius: 1rem;
+}
+
+.box:hover {
+  cursor: pointer;
+}
+
+.contenedor-imagenes:hover .box {
+  filter: grayscale(1);
+}
+
+.contenedor-imagenes .box:hover {
+  filter: grayscale(0);
+}
+
+.contenedor-imagenes:has(.one:hover) {
+  grid-template-columns: 2fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+}
+
+.contenedor-imagenes:has(.two:hover) {
+  grid-template-columns: .5fr 2fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+}
+
+.contenedor-imagenes:has(.three:hover) {
+  grid-template-columns: .5fr .5fr 2fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+}
+
+.contenedor-imagenes:has(.four:hover) {
+  grid-template-columns: .5fr .5fr .5fr 2fr .5fr .5fr .5fr .5fr .5fr .5fr;
+}
+
+.contenedor-imagenes:has(.five:hover) {
+  grid-template-columns: .5fr .5fr .5fr .5fr 2fr .5fr .5fr .5fr .5fr .5fr;
+}
+
+.contenedor-imagenes:has(.six:hover) {
+  grid-template-columns: .5fr .5fr .5fr .5fr .5fr 2fr .5fr .5fr .5fr .5fr;
+}
+
+.contenedor-imagenes:has(.seven:hover) {
+  grid-template-columns: .5fr .5fr .5fr .5fr .5fr .5fr 2fr .5fr .5fr .5fr;
+}
+
+.contenedor-imagenes:has(.eight:hover) {
+  grid-template-columns: .5fr .5fr .5fr .5fr .5fr .5fr .5fr 2fr .5fr .5fr;
+}
+
+.contenedor-imagenes:has(.nine:hover) {
+  grid-template-columns: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr 2fr .5fr;
+}
+
+.contenedor-imagenes:has(.ten:hover) {
+  grid-template-columns: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr 2fr;
+}
+
+
+
+.lightbox {
+  display: none;
+}
+
+.lightbox:target {
+  display: block;
+  position: fixed;
+  background-color: rgba(0, 0, 0, .75);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox h3 {
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.imagen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen a {
+  font-size: 40px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.imagen a :nth-child(2) {
+  margin: 0;
+  height: 100%;
+  flex-shrink: 2;
+}
+
+.imagen img {
+  width: 500px;
+  height: 100%;
+  max-width: 100%;
+  box-shadow: border-box;
+}
+
+.cerrar {
+  display: block;
+  background-color: white;
+  width: 35px;
+  border-radius: 5px;
+  margin: 15px auto;
+  margin-left: calc(65% - 14px);
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 900;
+  color: rgb(49, 49, 49);
+}
+
 /*** FOOTER ***/
 
 .footer {
@@ -1346,8 +1508,6 @@ details[open] summary::marker {
   }
 }
 
-
-
 @media screen and (max-width: 500px) {
 
 
@@ -1382,6 +1542,10 @@ details[open] summary::marker {
     padding: .5rem;
   }
 
+  .open-menu {
+    margin-left: 1rem;
+  }
+
   .menu-right {
     width: 100vw;
     height: 18.75dvh;
@@ -1389,7 +1553,7 @@ details[open] summary::marker {
   }
 
   .header img {
-    margin-left: calc(50% - 76.5px);
+    margin-left: calc(50% - 90px);
   }
 
   .typewriter,
