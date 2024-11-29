@@ -83,4 +83,3 @@ document.addEventListener('DOMContentLoaded', activateAnimations);
 window.addEventListener('scroll', activateCircles);
 window.addEventListener('resize', activateCircles);
 document.addEventListener('DOMContentLoaded', activateCircles);
-

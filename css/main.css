@@ -1385,6 +1385,153 @@ details[open] summary::marker {
   color: rgb(49, 49, 49);
 }
 
+
+/*** CONTACTO ***/
+
+.contacto-seccion {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 5rem;
+  width: 100%;
+}
+
+.contacto-mensaje {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding-block: 5rem;
+  align-items: center;
+}
+
+.cont-texto {
+  flex: 1;
+  animation:scale-in-hor-left .5s cubic-bezier(.25,.46,.45,.94) both
+}
+
+.cont-texto h2 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 900;
+  color: #9c9c9c;
+}
+
+.cont-texto p {
+  margin-top: 2rem;
+}
+
+.cont-img {
+  flex: 1;
+  background-image: url("../img/contacto-fondo-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 9rem;
+  animation:scale-in-hor-right .7s cubic-bezier(.25,.46,.45,.94) both
+}
+
+.contacto-info{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contacto-mapa {
+  flex: 1;
+  height: fit-content;
+  animation:scale-in-hor-left .9s cubic-bezier(.25,.46,.45,.94) both
+}
+
+.contacto-mapa iframe {
+  width: 100%;
+  height: 70dvh;
+  height: 70vh;
+  border: none;
+}
+
+.contacto-formulario {
+  flex: 1;
+  height: 70dvh;
+  height: 70vh;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  animation:scale-in-hor-right .9s cubic-bezier(.25,.46,.45,.94) both
+}
+
+.contacto-formulario h4 {
+  font-weight: 900;
+  font-size: 24px;
+  color: rgb(44, 44, 44);
+  margin-bottom: 20px;
+  text-align: left;
+  font-family: var(--fuente-titulos);
+}
+
+.contacto-formulario form {
+  width: 80%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contacto_nombre {
+  width: 100%;
+  padding: 7px;
+}
+
+.contacto_email {
+  width: 100%;
+  padding: 7px;
+}
+
+.contacto_selector {
+  width: 100%;
+  padding: 7px;
+}
+
+.form-control {
+  padding: 10px;
+}
+
+.contacto_boton {
+  width: 30%;
+  padding: 7px;
+  align-self: center;
+  background-color: rgb(133, 0, 33);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+#mensaje-resultado {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.mensaje-exito {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.mensaje-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes scale-in-hor-left{0%{transform:scaleX(0);transform-origin:0 0;opacity:1}100%{transform:scaleX(1);transform-origin:0 0;opacity:1}}
+
+@keyframes scale-in-hor-right{0%{transform:scaleX(0);transform-origin:100% 100%;opacity:1}100%{transform:scaleX(1);transform-origin:100% 100%;opacity:1}}
+
 /*** FOOTER ***/
 
 .footer {
@@ -1411,6 +1558,7 @@ details[open] summary::marker {
 
 .info-left {
   color: rgb(105, 105, 105);
+  text-align: center;
 }
 
 .info-right {
@@ -1523,6 +1671,22 @@ details[open] summary::marker {
   .inst-texto {
     flex: 1.2;
   }
+}
+
+@media screen and (max-width: 850px) {
+  .contacto-seccion {
+    padding-inline: 2rem;
+  }
+
+  .cont-texto h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .contacto-formulario h4 {
+    font-size: 1rem;
+  }
+  
 }
 
 @media screen and (max-width: 800px) {
@@ -1955,6 +2119,50 @@ details[open] summary::marker {
     margin-left: calc(85% - 14px);
     font-size: 20px;
     font-weight: 900;
+  }
+  
+  .contacto-mensaje {
+    flex-direction: column;
+    gap: 2rem;
+    padding-block: 5rem;
+    align-items: center;
+  }
+  
+  .cont-texto h2 {
+    font-size: 2rem;
+  }
+  
+  .cont-texto p {
+    margin-top: 2rem;
+  }
+  
+  .cont-img {
+    flex: 1;
+    width: 100%;
+    height: 60vh;
+  }
+  
+  .contacto-info{
+    flex-direction: column-reverse;
+  }
+  
+  .contacto-mapa iframe {
+    height: 50dvh;
+    height: 50vh;
+  }
+  
+  .contacto-formulario {
+    height: fit-content;
+    padding: 2rem 0;
+  }
+  
+  .contacto-formulario h4 {
+    font-weight: 900;
+    font-size: 24px;
+    color: rgb(44, 44, 44);
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: var(--fuente-titulos);
   }
   
 }
