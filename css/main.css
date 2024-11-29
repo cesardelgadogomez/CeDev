@@ -1717,7 +1717,6 @@ details[open] summary::marker {
     margin-bottom: 4rem;
   }
   
-  
   .proyectos-logos h3,
   .proyectos-volantes h3,
   .proyectos-editorial h3,
@@ -1894,7 +1893,6 @@ details[open] summary::marker {
     grid-template-rows: .5fr .5fr .5fr .5fr .5fr 1fr;
   }
   
-  
   /* CONTENEDOR WEB */
   
   .contenedor-web:has(.one:hover) {
@@ -1932,6 +1930,18 @@ details[open] summary::marker {
     width: 80%;
     max-width: 90%;
   }
+
+  .lightbox {
+    display: none;
+  }
+  
+  .lightbox:target {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+  }
+  
 
   .cerrar {
     width: 25px;
