@@ -1288,7 +1288,6 @@ details[open] summary::marker {
 }
 
 
-
 .lightbox {
   display: none;
 }
@@ -1642,8 +1641,7 @@ details[open] summary::marker {
   .typewriter {
     font-size: 5rem;
     line-height: 4.5rem;
-  }
-  
+  } 
 }
 
 @media screen and (max-width: 600px) {
@@ -1681,6 +1679,267 @@ details[open] summary::marker {
     font-size: 4rem;
     line-height: 3.5rem;
   }
+
+  .mensaje-proyectos h2,
+  .mensaje-proyectos h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  .mensaje-proyectos h1 {
+    line-height: 3rem;
+  }
+  
+  .proyectos-presentacion {
+    padding: 2rem;
+    padding-bottom: 4rem;
+    flex-direction: column-reverse;
+  }
+  
+  .presentacion-imagenes {
+    padding-block: 3rem;
+  }
+  
+  .presentacion-texto h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .proyectos-logos,
+  .proyectos-volantes,
+  .proyectos-editorial,
+  .proyectos-web {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  
+  
+  .proyectos-logos h3,
+  .proyectos-volantes h3,
+  .proyectos-editorial h3,
+  .proyectos-web h3 {
+    font-size: 2rem;
+  }
+  
+  .contenedor-logos {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 80%;
+    height: fit-content;
+  }
+  
+  .contenedor-volantes {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 80%;
+    height: fit-content;
+  }
+  
+  .contenedor-editorial {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 80%;
+    height: fit-content;
+  }
+  
+  .contenedor-web {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 80%;
+    height: fit-content;
+  }
+  
+  .box {
+    background: var(--image);
+    background-position: center;
+    background-size: cover;
+    transition: .5s;
+    border-radius: 1rem;
+    padding-block: 4rem;
+  }
+  
+  .box:hover {
+    cursor: pointer;
+  }
+  
+  /* CONTENEDOR DE LOGOS */
+  
+  .contenedor-logos:has(.one:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-logos:has(.two:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 2fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-logos:has(.three:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr 2fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-logos:has(.four:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr 2fr .5fr .5fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-logos:has(.five:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr 2fr .5fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-logos:has(.six:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr 2fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-logos:has(.seven:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr 2fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-logos:has(.eight:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr .5fr 2fr .5fr .5fr;
+  }
+  
+  .contenedor-logos:has(.nine:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr 2fr .5fr;
+  }
+  
+  .contenedor-logos:has(.ten:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr 2fr;
+  }
+  
+  
+  /* CONTENEDOR DE VOLANTES */
+  
+  .contenedor-volantes:has(.one:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-volantes:has(.two:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 2fr .5fr .5fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-volantes:has(.three:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr 2fr .5fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-volantes:has(.four:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr 2fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-volantes:has(.five:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr 2fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-volantes:has(.six:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr 2fr .5fr .5fr;
+  }
+  
+  .contenedor-volantes:has(.seven:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr 2fr .5fr;
+  }
+  
+  .contenedor-volantes:has(.eight:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr .5fr 2fr;
+  }
+  
+  
+  /* CONTENEDOR EDITORIAL */
+  
+  .contenedor-editorial:has(.one:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .5fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-editorial:has(.two:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-editorial:has(.three:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr 1fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-editorial:has(.four:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr 1fr .5fr .5fr;
+  }
+  
+  .contenedor-editorial:has(.five:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr 1fr .5fr;
+  }
+  
+  .contenedor-editorial:has(.six:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr 1fr;
+  }
+  
+  
+  /* CONTENEDOR WEB */
+  
+  .contenedor-web:has(.one:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .5fr .5fr .5fr;
+  }
+  
+  .contenedor-web:has(.two:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr .5fr .5fr;
+  }
+  
+  .contenedor-web:has(.three:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr 1fr .5fr;
+  }
+  
+  .contenedor-web:has(.four:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr 1fr;
+  }
+  
+  .imagen img {
+    width: 300px;
+    height: 100%;
+    max-width: 90%;
+  }
+  
+  .imagen-editorial img {
+    width: 270px;
+    max-width: 90%;
+  }
+  
+  .imagen-web img {
+    width: 80%;
+    max-width: 90%;
+  }
+
+  .cerrar {
+    width: 25px;
+    margin-left: calc(85% - 14px);
+    font-size: 20px;
+    font-weight: 900;
+  }
+  
 }
 
 
