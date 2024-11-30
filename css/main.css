@@ -1504,9 +1504,15 @@ details[open] summary::marker {
   padding: 7px;
   align-self: center;
   background-color: rgb(133, 0, 33);
+  border: none;
   border-radius: 10px;
   color: white;
   cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.contacto_boton:hover {
+  background-color: rgb(206, 25, 70);
 }
 
 #mensaje-resultado {
