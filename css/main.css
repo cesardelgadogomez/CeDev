@@ -1422,7 +1422,7 @@ details[open] summary::marker {
 
 .cont-img {
   flex: 1;
-  background-image: url("../img/contacto-fondo-1.png");
+  background-image: url("../img/contacto-fondo-2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1561,11 +1561,26 @@ details[open] summary::marker {
   text-align: center;
 }
 
+.footer-menu {
+  display:flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.footer-menu a {
+  color: rgb(105, 105, 105);
+  transition: all .3s ease-in-out;
+  text-align: center;
+}
+
+.footer-menu a:hover {
+  color: rgb(255, 255, 255);
+}
+
 .info-right {
   display: flex;
   font-size: 1.1rem;
-  gap: 3rem;
-  
+  gap: 3rem; 
 }
 
 .info-right a {
@@ -1671,6 +1686,20 @@ details[open] summary::marker {
   .inst-texto {
     flex: 1.2;
   }
+
+  .info-left {
+    flex: 1;
+  }
+
+  .footer-menu,
+  .info-right {
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  
 }
 
 @media screen and (max-width: 850px) {
@@ -2190,10 +2219,12 @@ details[open] summary::marker {
   .info-left {
     color: rgb(105, 105, 105);
   }
-  
+
   .info-right {
+    flex-direction: row;
     padding-top: 1rem;
     justify-content: center; 
+    gap: 2rem;
   }
 }
 
