@@ -2085,59 +2085,59 @@ details[open] summary::marker {
   
   .contenedor-editorial:has(.one:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr .5fr .5fr .5fr .5fr .5fr;
+    grid-template-rows: 2fr .5fr .5fr .5fr .5fr .5fr;
   }
   
   .contenedor-editorial:has(.two:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr 1fr .5fr .5fr .5fr .5fr;
+    grid-template-rows: .5fr 2fr .5fr .5fr .5fr .5fr;
   }
   
   .contenedor-editorial:has(.three:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr .5fr 1fr .5fr .5fr .5fr;
+    grid-template-rows: .5fr .5fr 2fr .5fr .5fr .5fr;
   }
   
   .contenedor-editorial:has(.four:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr .5fr .5fr 1fr .5fr .5fr;
+    grid-template-rows: .5fr .5fr .5fr 2fr .5fr .5fr;
   }
   
   .contenedor-editorial:has(.five:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr .5fr .5fr .5fr 1fr .5fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr 2fr .5fr;
   }
   
   .contenedor-editorial:has(.six:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr .5fr .5fr .5fr .5fr 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr 2fr;
   }
   
   /* CONTENEDOR WEB */
   
   .contenedor-web:has(.one:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr .5fr .5fr .5fr .5fr;
+    grid-template-rows: 2fr .5fr .5fr .5fr .5fr;
   }
   
   .contenedor-web:has(.two:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr 1fr .5fr .5fr .5fr;
+    grid-template-rows: .5fr 2fr .5fr .5fr .5fr;
   }
   
   .contenedor-web:has(.three:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr .5fr 1fr .5fr .5fr;
+    grid-template-rows: .5fr .5fr 2fr .5fr .5fr;
   }
   
   .contenedor-web:has(.four:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr .5fr .5fr 1fr .5fr;
+    grid-template-rows: .5fr .5fr .5fr 2fr .5fr;
   }
-
+  
   .contenedor-web:has(.five:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr .5fr .5fr .5fr 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr 2fr;
   }
   
   .imagen img {
