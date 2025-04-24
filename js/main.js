@@ -23,14 +23,12 @@ function typeEffect() {
   if (index < text.length) {
     typewriter.textContent += text[index];
     index++;
-    setTimeout(typeEffect, 90); // Ajusta la velocidad del efecto
+    setTimeout(typeEffect, 90);
   }
 }
 
 typeEffect();
 
-
-//Animación de barras
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -41,23 +39,21 @@ function isInViewport(element) {
   );
 }
 
-// Función para activar animaciones de las barras de habilidades
 function activateAnimations() {
   const skillsContainer = document.getElementById('skills');
   if (isInViewport(skillsContainer)) {
-    skillsContainer.style.opacity = 1; // Mostrar la sección al ser visible en el scroll
+    skillsContainer.style.opacity = 1;
     const bars = document.querySelectorAll('.bar-fill');
     bars.forEach(bar => {
       const animation = bar.getAttribute('data-animation');
-      bar.style.animation = animation; // Activar animación para cada barra
+      bar.style.animation = animation;
     });
-    // Remover eventos después de activación
+
     window.removeEventListener('scroll', activateAnimations);
     window.removeEventListener('resize', activateAnimations);
   }
 }
 
-// Función para activar animaciones de los círculos de tecnologías
 function activateCircles() {
   const techContainer = document.getElementById('technologies');
   if (isInViewport(techContainer)) {
@@ -67,15 +63,14 @@ function activateCircles() {
       const percentage = circle.getAttribute('data-percentage');
       const progress = circle.querySelector('.progress');
       const offset = 314 - (314 * percentage) / 100;
-      progress.style.strokeDashoffset = offset; // Aquí se anima cada círculo
+      progress.style.strokeDashoffset = offset; 
     });
-    // Remover eventos después de activación
+
     window.removeEventListener('scroll', activateCircles);
     window.removeEventListener('resize', activateCircles);
   }
 }
 
-// Agregar eventos para ambas secciones
 window.addEventListener('scroll', activateAnimations);
 window.addEventListener('resize', activateAnimations);
 document.addEventListener('DOMContentLoaded', activateAnimations);
