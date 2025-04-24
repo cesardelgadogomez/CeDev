@@ -1,3 +1,4 @@
+// Load translations
 let translations = {
   "es": {
     "index": {
@@ -233,11 +234,11 @@ let translations = {
       "explora-habilidades-p": "Would you like to see a detailed overview of my competencies, skills, and abilities? Or perhaps you’d prefer to see a sample of my work as a graphic designer and web developer? Don’t hesitate to explore these sections to convince yourself of my work. :D",
       "explora-botones-h3-1": "Go to Skills",
       "explora-botones-h3-2": "Go to Projects",
-      "footer-info-left": "CeDev © 2024 | All rights reserved.",
-      "footer-menu-quien-soy": "Who am I?",
-      "footer-menu-habilidades": "Skills",
-      "footer-menu-proyectos": "Projects",
-      "footer-menu-contacto": "Contact"
+      "footer-info-left": "CeDev © 2024 | Todos los derechos reservados.",
+      "footer-menu-quien-soy": "Quién soy",
+      "footer-menu-habilidades": "Habilidades",
+      "footer-menu-proyectos": "Proyectos",
+      "footer-menu-contacto": "Contacto"
     },
     "habilidades": {
       "nav-quien-soy": "Who am I?",
@@ -280,7 +281,7 @@ let translations = {
       "languages-h2": "Languages",
       "language-p1": "English - C1",
       "language-p2": "French - A1",
-      "footer-info-left": "CeDev © 2024 | All rights reserved.",
+      "footer-info-left": "CeDev © 2024 | Todos los derechos reservados.",
       "footer-menu-quien-soy": "Who am I?",
       "footer-menu-habilidades": "Skills",
       "footer-menu-proyectos": "Projects",
@@ -356,7 +357,7 @@ let translations = {
       "lightbox-web-5-p": "E-commerce web project with functional registration and login, integrating a MongoDB backend and hosted on a Digital Ocean server with a real domain.",
       "lightbox-web-5-p2": "Click here to view the page",
       "lightbox-web-5-p3": "(Opens in a new tab)",
-      "footer-info-left": "CeDev © 2024 | All rights reserved.",
+      "footer-info-left": "CeDev © 2024 | Todos los derechos reservados.",
       "footer-menu-quien-soy": "Who am I?",
       "footer-menu-habilidades": "Skills",
       "footer-menu-proyectos": "Projects",
@@ -378,7 +379,7 @@ let translations = {
       "form-tema-option-3": "Other",
       "form-mensaje-placeholder": "Write something...",
       "form-boton": "Send",
-      "footer-info-left": "CeDev © 2024 | All rights reserved.",
+      "footer-info-left": "CeDev © 2024 | Todos los derechos reservados.",
       "footer-menu-quien-soy": "Who am I?",
       "footer-menu-habilidades": "Skills",
       "footer-menu-proyectos": "Projects",
@@ -393,6 +394,7 @@ let currentLang = localStorage.getItem('language') || 'es';
 function setLanguage(lang) {
   currentLang = lang;
   localStorage.setItem('language', lang);
+  console.log('Language changed to:', lang); // Depuración
   
   // Update all elements with data-lang attributes
   document.querySelectorAll('[data-lang]').forEach(element => {
@@ -422,11 +424,13 @@ function setLanguage(lang) {
 // Toggle language
 function toggleLanguage() {
   const newLang = currentLang === 'es' ? 'en' : 'es';
+  console.log('Toggling to language:', newLang); // Depuración
   setLanguage(newLang);
 }
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('Initializing language:', currentLang); // Depuración
   setLanguage(currentLang);
   const langButton = document.getElementById('lang-toggle');
   if (langButton) {
