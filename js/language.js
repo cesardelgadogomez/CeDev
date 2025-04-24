@@ -4,7 +4,7 @@ let currentLang = localStorage.getItem('language') || 'es';
 
 async function loadTranslations() {
   try {
-    const response = await fetch('../data/translations.json');
+    const response = await fetch('../translations.json');
     translations = await response.json();
     setLanguage(currentLang);
   } catch (error) {
