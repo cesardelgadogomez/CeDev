@@ -11,9 +11,7 @@
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-
   <div class="container">
-    
     <header class="header">
       <button class="open-menu" id="open-menu">
         <i class="bi bi-list"></i>
@@ -23,27 +21,25 @@
           <i class="bi bi-x"></i>
         </button>
         <ul class="menu">
-          <a href="./quien-soy.html"><li>Quién soy</li></a>
-          <a href="./habilidades.html"><li>Habilidades</li></a>
-          <a href="./proyectos.html"><li>Proyectos</li></a>
-          <a href="./contacto.html"><li>Contacto</li></a>
+          <a href="./quien-soy.html"><li data-lang="nav-quien-soy" data-section="contacto">Quién soy</li></a>
+          <a href="./habilidades.html"><li data-lang="nav-habilidades" data-section="contacto">Habilidades</li></a>
+          <a href="./proyectos.html"><li data-lang="nav-proyectos" data-section="contacto">Proyectos</li></a>
+          <a href="./contacto.html"><li data-lang="nav-contacto" data-section="contacto">Contacto</li></a>
         </ul>
       </nav>
       <div class="logo">
         <a href="./index.html"><img src="./img/logo2.png" alt=""></a>
       </div>
+      <button id="lang-toggle" class="lang-toggle">EN</button>
     </header>
     
     <main class="contacto-seccion">
-
       <section class="contacto-mensaje">
         <div class="cont-texto">
-          <h2>ESTÁS A UN PASO DE PERPETUAR LA IMAGEN DE TU NEGOCIO</h2>
-          <p>¿Listo para que trabajemos juntos? Tu emprendimiento dirá algo más que un simple "¡Hola, mundo!". Hagamos que tenga una verdadera huella en el mundo digital e impreso.</p>
+          <h2 data-lang="cont-texto-h2" data-section="contacto">ESTÁS A UN PASO DE PERPETUAR LA IMAGEN DE TU NEGOCIO</h2>
+          <p data-lang="cont-texto-p" data-section="contacto">¿Listo para que trabajemos juntos? Tu emprendimiento dirá algo más que un simple "¡Hola, mundo!". Hagamos que tenga una verdadera huella en el mundo digital e impreso.</p>
         </div>
-
         <div class="cont-img"></div>
-        
       </section>
   
       <div class="contacto-info">
@@ -52,28 +48,26 @@
         </div>
 
         <div class="contacto-formulario">
-          <h4>¿Quieres enviarme un mensaje?</h4>
-        <form id="contacto-campos" action="https://formspree.io/f/xnnqonyb" method="POST">
+          <h4 data-lang="contacto-formulario-h4" data-section="contacto">¿Quieres enviarme un mensaje?</h4>
+          <form id="contacto-campos" action="https://formspree.io/f/xnnqonyb" method="POST">
             <label for="nombre">
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required class="contacto_nombre">
+              <input type="text" name="nombre" id="nombre" data-lang-placeholder="form-nombre-placeholder" data-section="contacto" placeholder="Nombre" required class="contacto_nombre">
             </label>
             <label for="email">
-                <input type="email" name="email" id="email" placeholder="Email" required class="contacto_email">
+              <input type="email" name="email" id="email" data-lang-placeholder="form-email-placeholder" data-section="contacto" placeholder="Email" required class="contacto_email">
             </label>
             <select name="tema" id="tema" required class="contacto_selector">
-                <option disabled selected value="">¿De qué quieres hablarme?</option>
-                <option value="Cotización de logo">Cotización de logo</option>
-                <option value="Paquete de diseños">Paquete de diseños</option>
-                <option value="Otros">Otros</option>
+              <option disabled selected value="" data-lang="form-tema-placeholder" data-section="contacto">¿De qué quieres hablarme?</option>
+              <option value="Cotización de logo" data-lang="form-tema-option-1" data-section="contacto">Cotización de logo</option>
+              <option value="Paquete de diseños" data-lang="form-tema-option-2" data-section="contacto">Paquete de diseños</option>
+              <option value="Otros" data-lang="form-tema-option-3" data-section="contacto">Otros</option>
             </select>
-            <textarea name="mensaje" placeholder="Escribe algo..." id="mensaje" style="height: 100px" required></textarea>
-            <button type="submit" class="contacto_boton">Enviar</button>
-        </form>
-        <div id="mensaje-resultado" style="margin-top: 20px; display: none;"></div>
+            <textarea name="mensaje" data-lang-placeholder="form-mensaje-placeholder" data-section="contacto" placeholder="Escribe algo..." id="mensaje" style="height: 100px" required></textarea>
+            <button type="submit" class="contacto_boton" data-lang="form-boton" data-section="contacto">Enviar</button>
+          </form>
+          <div id="mensaje-resultado" style="margin-top: 20px; display: none;"></div>
         </div>
-        
       </div>
-
     </main>
     
     <footer class="footer">
@@ -81,15 +75,13 @@
         <img src="./img/logo2.png" alt="">
       </section>
       <section class="footer-info">
-        <div class="info-left">
-          CeDev © 2024 | Todos los derechos reservados.
-        </div>
+        <div class="info-left" data-lang="footer-info-left" data-section="contacto">CeDev © 2024 | Todos los derechos reservados.</div>
         <div class="center">
           <ul class="footer-menu">
-            <a href="./quien-soy.html"><li>Quién soy</li></a>
-            <a href="./habilidades.html"><li>Habilidades</li></a>
-            <a href="./proyectos.html"><li>Proyectos</li></a>
-            <a href="./contacto.html"><li>Contacto</li></a>
+            <a href="./quien-soy.html"><li data-lang="footer-menu-quien-soy" data-section="contacto">Quién soy</li></a>
+            <a href="./habilidades.html"><li data-lang="footer-menu-habilidades" data-section="contacto">Habilidades</li></a>
+            <a href="./proyectos.html"><li data-lang="footer-menu-proyectos" data-section="contacto">Proyectos</li></a>
+            <a href="./contacto.html"><li data-lang="footer-menu-contacto" data-section="contacto">Contacto</li></a>
           </ul>
         </div>
         <div class="info-right">
@@ -101,15 +93,14 @@
         </div>
       </section>
     </footer>
-    
   </div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/language.js"></script>
   <script src="./js/form.js"></script>
   <script src="./js/main.js"></script>
   <script>
     AOS.init();
   </script>
-  
 </body>
 </html>

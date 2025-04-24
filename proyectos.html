@@ -10,9 +10,7 @@
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-
   <div class="container">
-    
     <header class="header">
       <button class="open-menu" id="open-menu">
         <i class="bi bi-list"></i>
@@ -22,38 +20,36 @@
           <i class="bi bi-x"></i>
         </button>
         <ul class="menu">
-          <a href="./quien-soy.html"><li>Quién soy</li></a>
-          <a href="./habilidades.html"><li>Habilidades</li></a>
-          <a href="./proyectos.html"><li>Proyectos</li></a>
-          <a href="./contacto.html"><li>Contacto</li></a>
+          <a href="./quien-soy.html"><li data-lang="nav-quien-soy" data-section="proyectos">Quién soy</li></a>
+          <a href="./habilidades.html"><li data-lang="nav-habilidades" data-section="proyectos">Habilidades</li></a>
+          <a href="./proyectos.html"><li data-lang="nav-proyectos" data-section="proyectos">Proyectos</li></a>
+          <a href="./contacto.html"><li data-lang="nav-contacto" data-section="proyectos">Contacto</li></a>
         </ul>
       </nav>
       <div class="logo">
         <a href="./index.html"><img src="./img/logo2.png" alt=""></a>
       </div>
+      <button id="lang-toggle" class="lang-toggle">EN</button>
     </header>
     
     <main>
       <section class="mensaje-proyectos">
-        <h2>DÉMOSLE IDENTIDAD</h2>
-        <h1>A TU MARCA</h1>
+        <h2 data-lang="mensaje-proyectos-h2" data-section="proyectos">DÉMOSLE IDENTIDAD</h2>
+        <h1 data-lang="mensaje-proyectos-h1" data-section="proyectos">A TU MARCA</h1>
       </section>
 
       <section class="proyectos-presentacion">
-        <div class="presentacion-imagenes p-i-1">
-        </div>
-        <div class="presentacion-imagenes p-i-2">
-        </div>
+        <div class="presentacion-imagenes p-i-1"></div>
+        <div class="presentacion-imagenes p-i-2"></div>
         <div class="presentacion-texto">
-          <h3>¡Mira mis muestras de trabajo!</h3>
-          <p>Les presento una pequeña muestra de todas piezas gráficas y páginas web que he podido hacer, tanto en estos 14 años como diseñador gráfico, así como en este corto tiempo que me he dedicado a aprender de desarrollo web. Espero que sean de tu agrado y veas que <strong>tu marca o idea, puede estar en las mejores manos.</strong></p>
-          <p>¡Que lo disfrutes!</p>
+          <h3 data-lang="presentacion-texto-h3" data-section="proyectos">¡Mira mis muestras de trabajo!</h3>
+          <p data-lang="presentacion-texto-p1" data-section="proyectos">Les presento una pequeña muestra de todas piezas gráficas y páginas web que he podido hacer, tanto en estos 14 años como diseñador gráfico, así como en este corto tiempo que me he dedicado a aprender de desarrollo web. Espero que sean de tu agrado y veas que <strong>tu marca o idea, puede estar en las mejores manos.</strong></p>
+          <p data-lang="presentacion-texto-p2" data-section="proyectos">¡Que lo disfrutes!</p>
         </div>
       </section>
 
       <section class="proyectos-logos" data-aos="fade-up">
-        <h3>Logos</h3>
-
+        <h3 data-lang="proyectos-logos-h3" data-section="proyectos">Logos</h3>
         <section class="contenedor-logos">
           <a href="#imagen-logo-1" class="box one" style="--image:url(../img/gallery/full-logo1.png)"></a>
           <a href="#imagen-logo-2" class="box two" style="--image:url(../img/gallery/full-logo2.png)"></a>
@@ -66,12 +62,10 @@
           <a href="#imagen-logo-9" class="box nine" style="--image:url(../img/gallery/full-logo9.png)"></a>
           <a href="#imagen-logo-10" class="box ten" style="--image:url(../img/gallery/full-logo10.png)"></a>
         </section>
-
       </section>
 
       <section class="proyectos-volantes" data-aos="fade-up">
-        <h3>Volantes</h3>
-
+        <h3 data-lang="proyectos-volantes-h3" data-section="proyectos">Volantes</h3>
         <section class="contenedor-volantes">
           <a href="#imagen-volante-1" class="box one" style="--image:url(../img/gallery/Flyer-1.png)"></a>
           <a href="#imagen-volante-2" class="box two" style="--image:url(../img/gallery/Flyer-2.png)"></a>
@@ -82,12 +76,10 @@
           <a href="#imagen-volante-7" class="box seven" style="--image:url(../img/gallery/Flyer-7.png)"></a>
           <a href="#imagen-volante-8" class="box eight" style="--image:url(../img/gallery/Flyer-8.png)"></a>
         </section>
-
       </section>
 
       <section class="proyectos-editorial" data-aos="fade-up">
-        <h3>Diseño editorial</h3>
-
+        <h3 data-lang="proyectos-editorial-h3" data-section="proyectos">Diseño editorial</h3>
         <section class="contenedor-editorial">
           <a href="#imagen-editorial-1" class="box one" style="--image:url(../img/gallery/magazine1.png)"></a>
           <a href="#imagen-editorial-2" class="box two" style="--image:url(../img/gallery/magazine2.png)"></a>
@@ -96,12 +88,10 @@
           <a href="#imagen-editorial-5" class="box five" style="--image:url(../img/gallery/magazine5.png)"></a>
           <a href="#imagen-editorial-6" class="box six" style="--image:url(../img/gallery/magazine6.png)"></a>
         </section>
-
       </section>
 
-       <section class="proyectos-web" data-aos="fade-up">
-        <h3>Proyectos web</h3>
-
+      <section class="proyectos-web" data-aos="fade-up">
+        <h3 data-lang="proyectos-web-h3" data-section="proyectos">Proyectos web</h3>
         <section class="contenedor-web">
           <a href="#imagen-web-1" class="box one" style="--image:url(../img/gallery/web-project-1.png)"></a>
           <a href="#imagen-web-2" class="box two" style="--image:url(../img/gallery/web-project-2.png)"></a>
@@ -109,20 +99,15 @@
           <a href="#imagen-web-4" class="box four" style="--image:url(../img/gallery/web-project-4.png)"></a>
           <a href="#imagen-web-5" class="box five" style="--image:url(../img/gallery/web-project-5.png)"></a>
         </section>
-
       </section>
 
-
-      <!-- Cuadros de Lightbox donde se muestran las imágenes: -->
-
       <!-- Sección de Logos -->
-
       <section class="lightbox" id="imagen-logo-1">
         <a href="# javascript:void(0)" class="cerrar">X</a>
         <figure class="imagen">
           <img src="./img/gallery/full-logo1.png" alt="">
         </figure>
-        <h3>Logo Awesome! Escuela de idiomas</h3>
+        <h3 data-lang="lightbox-logo-1-h3" data-section="proyectos">Logo Awesome! Escuela de idiomas</h3>
       </section>
 
       <section class="lightbox" id="imagen-logo-2">
@@ -130,7 +115,7 @@
         <figure class="imagen">
           <img src="./img/gallery/full-logo2.png" alt="">
         </figure>
-        <h3>Unidad de Desarrollo Vocacional - UDEV</h3>
+        <h3 data-lang="lightbox-logo-2-h3" data-section="proyectos">Unidad de Desarrollo Vocacional - UDEV</h3>
       </section>
 
       <section class="lightbox" id="imagen-logo-3">
@@ -138,7 +123,7 @@
         <figure class="imagen">
           <img src="./img/gallery/full-logo3.png" alt="">
         </figure>
-        <h3>Fantasy Star</h3>
+        <h3 data-lang="lightbox-logo-3-h3" data-section="proyectos">Fantasy Star</h3>
       </section>
 
       <section class="lightbox" id="imagen-logo-4">
@@ -146,7 +131,7 @@
         <figure class="imagen">
           <img src="./img/gallery/full-logo4.png" alt="">
         </figure>
-        <h3>Laboratorio Experimental de Publicidad - LEP</h3>
+        <h3 data-lang="lightbox-logo-4-h3" data-section="proyectos">Laboratorio Experimental de Publicidad - LEP</h3>
       </section>
 
       <section class="lightbox" id="imagen-logo-5">
@@ -154,7 +139,7 @@
         <figure class="imagen">
           <img src="./img/gallery/full-logo5.png" alt="">
         </figure>
-        <h3>Pancci Panificadora</h3>
+        <h3 data-lang="lightbox-logo-5-h3" data-section="proyectos">Pancci Panificadora</h3>
       </section>
 
       <section class="lightbox" id="imagen-logo-6">
@@ -162,7 +147,7 @@
         <figure class="imagen">
           <img src="./img/gallery/full-logo6.png" alt="">
         </figure>
-        <h3>ITA Nexus Lab</h3>
+        <h3 data-lang="lightbox-logo-6-h3" data-section="proyectos">ITA Nexus Lab</h3>
       </section>
 
       <section class="lightbox" id="imagen-logo-7">
@@ -170,7 +155,7 @@
         <figure class="imagen">
           <img src="./img/gallery/full-logo7.png" alt="">
         </figure>
-        <h3>Lorena Barbosa - Psicóloga</h3>
+        <h3 data-lang="lightbox-logo-7-h3" data-section="proyectos">Lorena Barbosa - Psicóloga</h3>
       </section>
 
       <section class="lightbox" id="imagen-logo-8">
@@ -178,7 +163,7 @@
         <figure class="imagen">
           <img src="./img/gallery/full-logo8.png" alt="">
         </figure>
-        <h3>Grupo Aptos SAS</h3>
+        <h3 data-lang="lightbox-logo-8-h3" data-section="proyectos">Grupo Aptos SAS</h3>
       </section>
 
       <section class="lightbox" id="imagen-logo-9">
@@ -186,7 +171,7 @@
         <figure class="imagen">
           <img src="./img/gallery/full-logo9.png" alt="">
         </figure>
-        <h3>Di' Milán - Productos Artesanales</h3>
+        <h3 data-lang="lightbox-logo-9-h3" data-section="proyectos">Di' Milán - Productos Artesanales</h3>
       </section>
 
       <section class="lightbox" id="imagen-logo-10">
@@ -194,18 +179,16 @@
         <figure class="imagen">
           <img src="./img/gallery/full-logo10.png" alt="">
         </figure>
-        <h3>Consentir - Grupo Pedagógico</h3>
+        <h3 data-lang="lightbox-logo-10-h3" data-section="proyectos">Consentir - Grupo Pedagógico</h3>
       </section>
 
-
-      <!-- Sección de volantes -->
-
+      <!-- Sección de Volantes -->
       <section class="lightbox" id="imagen-volante-1">
         <a href="# javascript:void(0)" class="cerrar">X</a>
         <figure class="imagen">
           <img src="./img/gallery/Flyer-1.png" alt="">
         </figure>
-        <h3>Volante ITA Profesional - Programa de Gastronomía</h3>
+        <h3 data-lang="lightbox-volante-1-h3" data-section="proyectos">Volante ITA Profesional - Programa de Gastronomía</h3>
       </section>
 
       <section class="lightbox" id="imagen-volante-2">
@@ -213,7 +196,7 @@
         <figure class="imagen">
           <img src="./img/gallery/Flyer-2.png" alt="">
         </figure>
-        <h3>Volante Licores La 4ta Avenida</h3>
+        <h3 data-lang="lightbox-volante-2-h3" data-section="proyectos">Volante Licores La 4ta Avenida</h3>
       </section>
 
       <section class="lightbox" id="imagen-volante-3">
@@ -221,7 +204,7 @@
         <figure class="imagen">
           <img src="./img/gallery/Flyer-3.png" alt="">
         </figure>
-        <h3>Volante Crackling - Súper Panceta Express</h3>
+        <h3 data-lang="lightbox-volante-3-h3" data-section="proyectos">Volante Crackling - Súper Panceta Express</h3>
       </section>
 
       <section class="lightbox" id="imagen-volante-4">
@@ -229,7 +212,7 @@
         <figure class="imagen">
           <img src="./img/gallery/Flyer-4.png" alt="">
         </figure>
-        <h3>Volante Somos Cultura, Somos de la Gente - Lanzamiento</h3>
+        <h3 data-lang="lightbox-volante-4-h3" data-section="proyectos">Volante Somos Cultura, Somos de la Gente - Lanzamiento</h3>
       </section>
 
       <section class="lightbox" id="imagen-volante-5">
@@ -237,7 +220,7 @@
         <figure class="imagen">
           <img src="./img/gallery/Flyer-5.png" alt="">
         </figure>
-        <h3>Volante Awesome! Escuela de Idiomas</h3>
+        <h3 data-lang="lightbox-volante-5-h3" data-section="proyectos">Volante Awesome! Escuela de Idiomas</h3>
       </section>
 
       <section class="lightbox" id="imagen-volante-6">
@@ -245,7 +228,7 @@
         <figure class="imagen">
           <img src="./img/gallery/Flyer-6.png" alt="">
         </figure>
-        <h3>Volante lanzamiento single Me Llamas</h3>
+        <h3 data-lang="lightbox-volante-6-h3" data-section="proyectos">Volante lanzamiento single Me Llamas</h3>
       </section>
 
       <section class="lightbox" id="imagen-volante-7">
@@ -253,7 +236,7 @@
         <figure class="imagen">
           <img src="./img/gallery/Flyer-7.png" alt="">
         </figure>
-        <h3>Volante promocional cursos UDEV</h3>
+        <h3 data-lang="lightbox-volante-7-h3" data-section="proyectos">Volante promocional cursos UDEV</h3>
       </section>
 
       <section class="lightbox" id="imagen-volante-8">
@@ -261,21 +244,19 @@
         <figure class="imagen">
           <img src="./img/gallery/Flyer-8.png" alt="">
         </figure>
-        <h3>Volante para redes - Clínica Denta</h3>
+        <h3 data-lang="lightbox-volante-8-h3" data-section="proyectos">Volante para redes - Clínica Denta</h3>
       </section>
 
-
-      <!-- Sección editorial -->
-
+      <!-- Sección Editorial -->
       <section class="lightbox" id="imagen-editorial-1">
         <a href="# javascript:void(0)" class="cerrar">X</a>
         <figure class="imagen-editorial">
           <img src="./img/gallery/magazine1.png" alt="">
         </figure>
-        <h3>Revista Cibeles Pharma</h3>
+        <h3 data-lang="lightbox-editorial-1-h3" data-section="proyectos">Revista Cibeles Pharma</h3>
         <div class="editorial-info">
-          <a href="https://acortar.link/T4DXmw" target="_blank">Haz click aquí para ver la revista</a>
-          <p>(Se abrirá en una nueva pestaña)</p>
+          <a href="https://acortar.link/T4DXmw" target="_blank" data-lang="lightbox-editorial-1-p" data-section="proyectos">Haz click aquí para ver la revista</a>
+          <p data-lang="lightbox-editorial-1-p2" data-section="proyectos">(Se abrirá en una nueva pestaña)</p>
         </div>
       </section>
 
@@ -284,10 +265,10 @@
         <figure class="imagen-editorial">
           <img src="./img/gallery/magazine2.png" alt="">
         </figure>
-        <h3>Catálogo de productos - Avequipos</h3>
+        <h3 data-lang="lightbox-editorial-2-h3" data-section="proyectos">Catálogo de productos - Avequipos</h3>
         <div class="editorial-info">
-          <a href="https://acortar.link/Y8okI5" target="_blank">Haz click aquí para ver la revista</a>
-          <p>(Se abrirá en una nueva pestaña)</p>
+          <a href="https://acortar.link/Y8okI5" target="_blank" data-lang="lightbox-editorial-2-p" data-section="proyectos">Haz click aquí para ver la revista</a>
+          <p data-lang="lightbox-editorial-2-p2" data-section="proyectos">(Se abrirá en una nueva pestaña)</p>
         </div>
       </section>
 
@@ -296,10 +277,10 @@
         <figure class="imagen-editorial">
           <img src="./img/gallery/magazine3.png" alt="">
         </figure>
-        <h3>Portafolio de servicios - I.E. San Giuseppe Moscati</h3>
+        <h3 data-lang="lightbox-editorial-3-h3" data-section="proyectos">Portafolio de servicios - I.E. San Giuseppe Moscati</h3>
         <div class="editorial-info">
-          <a href="https://acortar.link/xPJ0pt" target="_blank">Haz click aquí para ver la revista</a>
-          <p>(Se abrirá en una nueva pestaña)</p>
+          <a href="https://acortar.link/xPJ0pt" target="_blank" data-lang="lightbox-editorial-3-p" data-section="proyectos">Haz click aquí para ver la revista</a>
+          <p data-lang="lightbox-editorial-3-p2" data-section="proyectos">(Se abrirá en una nueva pestaña)</p>
         </div>
       </section>
 
@@ -308,10 +289,10 @@
         <figure class="imagen-editorial">
           <img src="./img/gallery/magazine4.png" alt="">
         </figure>
-        <h3>Portafolio de servicios - Clínica Denta</h3>
+        <h3 data-lang="lightbox-editorial-4-h3" data-section="proyectos">Portafolio de servicios - Clínica Denta</h3>
         <div class="editorial-info">
-          <a href="https://acortar.link/7f1aur" target="_blank">Haz click aquí para ver la revista</a>
-          <p>(Se abrirá en una nueva pestaña)</p>
+          <a href="https://acortar.link/7f1aur" target="_blank" data-lang="lightbox-editorial-4-p" data-section="proyectos">Haz click aquí para ver la revista</a>
+          <p data-lang="lightbox-editorial-4-p2" data-section="proyectos">(Se abrirá en una nueva pestaña)</p>
         </div>
       </section>
 
@@ -320,10 +301,10 @@
         <figure class="imagen-editorial">
           <img src="./img/gallery/magazine5.png" alt="">
         </figure>
-        <h3>Cartilla para diplomado - ITA Profesional | CVC | Patryo </h3>
+        <h3 data-lang="lightbox-editorial-5-h3" data-section="proyectos">Cartilla para diplomado - ITA Profesional | CVC | Patryo</h3>
         <div class="editorial-info">
-          <a href="https://acortar.link/RTT32S" target="_blank">Haz click aquí para ver la revista</a>
-          <p>(Se abrirá en una nueva pestaña)</p>
+          <a href="https://acortar.link/RTT32S" target="_blank" data-lang="lightbox-editorial-5-p" data-section="proyectos">Haz click aquí para ver la revista</a>
+          <p data-lang="lightbox-editorial-5-p2" data-section="proyectos">(Se abrirá en una nueva pestaña)</p>
         </div>
       </section>
 
@@ -332,26 +313,24 @@
         <figure class="imagen-editorial">
           <img src="./img/gallery/magazine6.png" alt="">
         </figure>
-        <h3>Revista informativa - I.E. República de Israel</h3>
+        <h3 data-lang="lightbox-editorial-6-h3" data-section="proyectos">Revista informativa - I.E. República de Israel</h3>
         <div class="editorial-info">
-          <a href="https://acortar.link/bwRQ14" target="_blank">Haz click aquí para ver la revista</a>
-          <p>(Se abrirá en una nueva pestaña)</p>
+          <a href="https://acortar.link/bwRQ14" target="_blank" data-lang="lightbox-editorial-6-p" data-section="proyectos">Haz click aquí para ver la revista</a>
+          <p data-lang="lightbox-editorial-6-p2" data-section="proyectos">(Se abrirá en una nueva pestaña)</p>
         </div>
       </section>
 
-
-      <!-- Sección web -->
-
+      <!-- Sección Web -->
       <section class="lightbox" id="imagen-web-1">
         <a href="# javascript:void(0)" class="cerrar">X</a>
         <figure class="imagen-web">
           <img src="./img/gallery/web-project-1-preview.png" alt="">
         </figure>
-        <h3>Tienda Virtual Nintendo BenShop</h3>
-        <p class="web-description">Sitio web creado con HTML, CSS y JS, usando localStorage para el carrito de compras.</p>
+        <h3 data-lang="lightbox-web-1-h3" data-section="proyectos">Tienda Virtual Nintendo BenShop</h3>
+        <p class="web-description" data-lang="lightbox-web-1-p" data-section="proyectos">Sitio web creado con HTML, CSS y JS, usando localStorage para el carrito de compras.</p>
         <div class="web-info">
-          <a href="https://cesardelgadogomez.github.io/nintendobenshop/" target="_blank">Haz click aquí para ver la página</a>
-          <p>(Se abrirá en una nueva pestaña)</p>
+          <a href="https://cesardelgadogomez.github.io/nintendobenshop/" target="_blank" data-lang="lightbox-web-1-p2" data-section="proyectos">Haz click aquí para ver la página</a>
+          <p data-lang="lightbox-web-1-p3" data-section="proyectos">(Se abrirá en una nueva pestaña)</p>
         </div>
       </section>
 
@@ -360,11 +339,11 @@
         <figure class="imagen-web">
           <img src="./img/gallery/web-project-2-preview.png" alt="">
         </figure>
-        <h3>La Agencia</h3>
-        <p class="web-description">Mock up de página web para agencia creativa.</p>
+        <h3 data-lang="lightbox-web-2-h3" data-section="proyectos">La Agencia</h3>
+        <p class="web-description" data-lang="lightbox-web-2-p" data-section="proyectos">Mock up de página web para agencia creativa.</p>
         <div class="web-info">
-          <a href="https://cesardelgadogomez.github.io/laagencia/" target="_blank">Haz click aquí para ver la página</a>
-          <p>(Se abrirá en una nueva pestaña)</p>
+          <a href="https://cesardelgadogomez.github.io/laagencia/" target="_blank" data-lang="lightbox-web-2-p2" data-section="proyectos">Haz click aquí para ver la página</a>
+          <p data-lang="lightbox-web-2-p3" data-section="proyectos">(Se abrirá en una nueva pestaña)</p>
         </div>
       </section>
 
@@ -373,11 +352,11 @@
         <figure class="imagen-web">
           <img src="./img/gallery/web-project-3-preview.png" alt="">
         </figure>
-        <h3>PokéAPI</h3>
-        <p class="web-description">Proyecto web usando la API de PokéAPI.com, pudiendo filtrar los Pokémon por tipos.</p>
+        <h3 data-lang="lightbox-web-3-h3" data-section="proyectos">PokéAPI</h3>
+        <p class="web-description" data-lang="lightbox-web-3-p" data-section="proyectos">Proyecto web usando la API de PokéAPI.com, pudiendo filtrar los Pokémon por tipos.</p>
         <div class="web-info">
-          <a href="https://cesardelgadogomez.github.io/pokeapi/" target="_blank">Haz click aquí para ver la página</a>
-          <p>(Se abrirá en una nueva pestaña)</p>
+          <a href="https://cesardelgadogomez.github.io/pokeapi/" target="_blank" data-lang="lightbox-web-3-p2" data-section="proyectos">Haz click aquí para ver la página</a>
+          <p data-lang="lightbox-web-3-p3" data-section="proyectos">(Se abrirá en una nueva pestaña)</p>
         </div>
       </section>
 
@@ -386,11 +365,11 @@
         <figure class="imagen-web">
           <img src="./img/gallery/web-project-4-preview.png" alt="">
         </figure>
-        <h3>Página de conteo regresivo</h3>
-        <p class="web-description">Sencillo proyecto web de conteo regresivo, pudiéndose adaptar a distintos propósitos.</p>
+        <h3 data-lang="lightbox-web-4-h3" data-section="proyectos">Página de conteo regresivo</h3>
+        <p class="web-description" data-lang="lightbox-web-4-p" data-section="proyectos">Sencillo proyecto web de conteo regresivo, pudiéndose adaptar a distintos propósitos.</p>
         <div class="web-info">
-          <a href="https://cesardelgadogomez.github.io/cuentaregresiva/" target="_blank">Haz click aquí para ver la página</a>
-          <p>(Se abrirá en una nueva pestaña)</p>
+          <a href="https://cesardelgadogomez.github.io/cuentaregresiva/" target="_blank" data-lang="lightbox-web-4-p2" data-section="proyectos">Haz click aquí para ver la página</a>
+          <p data-lang="lightbox-web-4-p3" data-section="proyectos">(Se abrirá en una nueva pestaña)</p>
         </div>
       </section>
 
@@ -399,14 +378,13 @@
         <figure class="imagen-web">
           <img src="./img/gallery/web-project-5-preview.png" alt="">
         </figure>
-        <h3>Varelas Bistró</h3>
-        <p class="web-description">Proyecto web de e-commerce con registro y login funcionales, integrando un backend hecho con MongoDB y montado en servidor Digital Ocean con dominio real.</p>
+        <h3 data-lang="lightbox-web-5-h3" data-section="proyectos">Varelas Bistró</h3>
+        <p class="web-description" data-lang="lightbox-web-5-p" data-section="proyectos">Proyecto web de e-commerce con registro y login funcionales, integrando un backend hecho con MongoDB y montado en servidor Digital Ocean con dominio real.</p>
         <div class="web-info">
-          <a href="https://varelasbistro.online/" target="_blank"><strong>Haz click aquí para ver la página</strong></a>
-          <p>(Se abrirá en una nueva pestaña)</p>
+          <a href="https://varelasbistro.online/" target="_blank" data-lang="lightbox-web-5-p2" data-section="proyectos">Haz click aquí para ver la página</a>
+          <p data-lang="lightbox-web-5-p3" data-section="proyectos">(Se abrirá en una nueva pestaña)</p>
         </div>
       </section>
-    
     </main>
     
     <footer class="footer">
@@ -414,15 +392,13 @@
         <img src="./img/logo2.png" alt="">
       </section>
       <section class="footer-info">
-        <div class="info-left">
-          CeDev © 2024 | Todos los derechos reservados.
-        </div>
+        <div class="info-left" data-lang="footer-info-left" data-section="proyectos">CeDev © 2024 | Todos los derechos reservados.</div>
         <div class="center">
           <ul class="footer-menu">
-            <a href="./quien-soy.html"><li>Quién soy</li></a>
-            <a href="./habilidades.html"><li>Habilidades</li></a>
-            <a href="./proyectos.html"><li>Proyectos</li></a>
-            <a href="./contacto.html"><li>Contacto</li></a>
+            <a href="./quien-soy.html"><li data-lang="footer-menu-quien-soy" data-section="proyectos">Quién soy</li></a>
+            <a href="./habilidades.html"><li data-lang="footer-menu-habilidades" data-section="proyectos">Habilidades</li></a>
+            <a href="./proyectos.html"><li data-lang="footer-menu-proyectos" data-section="proyectos">Proyectos</li></a>
+            <a href="./contacto.html"><li data-lang="footer-menu-contacto" data-section="proyectos">Contacto</li></a>
           </ul>
         </div>
         <div class="info-right">
@@ -434,10 +410,10 @@
         </div>
       </section>
     </footer>
-    
   </div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/language.js"></script>
   <script src="./js/main.js"></script>
   <script>
     AOS.init();

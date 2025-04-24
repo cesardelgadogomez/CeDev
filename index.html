@@ -11,29 +11,31 @@
 <body>
   <section class="index">
     <section class="left">
+      <button id="lang-toggle" class="lang-toggle-index">EN</button>
       <img src="./img/logo2.png" alt="">
     </section>
     <section class="right">
       <a href="./quien-soy.html"><div class="menu-right quien-soy">
         <i class="bi bi-person-lines-fill"></i>
-        <p>¿Quién soy?</p>
+        <p data-lang="quien-soy" data-section="index">¿Quién soy?</p>
       </div></a>
       <a href="./habilidades.html"><div class="menu-right habilidades">
         <i class="bi bi-bookmark-star-fill"></i>
-        <p>Habilidades</p>
+        <p data-lang="habilidades" data-section="index">Habilidades</p>
       </div></a>
       <a href="./proyectos.html"><div class="menu-right proyectos">
         <i class="bi bi-pc-display-horizontal"></i>
-        <p>Proyectos</p>
+        <p data-lang="proyectos" data-section="index">Proyectos</p>
       </div></a>
       <a href="./contacto.html"><div class="menu-right contacto">
         <i class="bi bi-person-rolodex"></i>
-        <p>Contacto</p>
+        <p data-lang="contacto" data-section="index">Contacto</p>
       </div></a>
     </section>
   </section>
   
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/language.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>

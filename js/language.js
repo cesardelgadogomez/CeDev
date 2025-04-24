@@ -1,57 +1,58 @@
+// Load translations
+let translations = {};
+let currentLang = localStorage.getItem('language') || 'es';
+
 async function loadTranslations() {
   try {
-    const response = await fetch('./data/translations.json');
-    return await response.json();
+    const response = await fetch('../data/translations.json');
+    translations = await response.json();
+    setLanguage(currentLang);
   } catch (error) {
     console.error('Error loading translations:', error);
-    return {};
   }
 }
 
-let currentLang = localStorage.getItem('language') || 'es';
-let translations = {};
-
-function updateContent(lang) {
+// Set language and update text
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('language', lang);
+  
+  // Update all elements with data-lang attributes
   document.querySelectorAll('[data-lang]').forEach(element => {
     const key = element.getAttribute('data-lang');
-    const keys = key.split('.');
-    let text = translations[lang];
-
-    for (const k of keys) {
-      text = text?.[k];
-      if (!text) break;
-    }
-
-    if (text) {
-      if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-        element.placeholder = text;
-      } else if (element.tagName === 'SELECT') {
-        element.querySelector('option[disabled]').textContent = text;
-      } else {
-        element.innerHTML = text;
-      }
+    const section = element.getAttribute('data-section');
+    if (translations[lang] && translations[lang][section] && translations[lang][section][key]) {
+      element.innerHTML = translations[lang][section][key];
     }
   });
 
-  const toggleButton = document.getElementById('language-toggle');
-  if (toggleButton) {
-    toggleButton.textContent = lang === 'es' ? 'EN' : 'ES';
-  }
+  // Update placeholder attributes
+  document.querySelectorAll('[data-lang-placeholder]').forEach(element => {
+    const key = element.getAttribute('data-lang-placeholder');
+    const section = element.getAttribute('data-section');
+    if (translations[lang] && translations[lang][section] && translations[lang][section][key]) {
+      element.placeholder = translations[lang][section][key];
+    }
+  });
 
-  document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+  // Update language button text
+  const langButton = document.getElementById('lang-toggle');
+  if (langButton) {
+    langButton.textContent = lang === 'es' ? 'EN' : 'ES';
+  }
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-  translations = await loadTranslations();
+// Toggle language
+function toggleLanguage() {
+  const newLang = currentLang === 'es' ? 'en' : 'es';
+  setLanguage(newLang);
+}
 
-  updateContent(currentLang);
-
-  const toggleButton = document.getElementById('language-toggle');
-  if (toggleButton) {
-    toggleButton.addEventListener('click', () => {
-      currentLang = currentLang === 'es' ? 'en' : 'es';
-      localStorage.setItem('language', currentLang);
-      updateContent(currentLang);
-    });
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+  loadTranslations();
+  const langButton = document.getElementById('lang-toggle');
+  if (langButton) {
+    langButton.addEventListener('click', toggleLanguage);
   }
 });

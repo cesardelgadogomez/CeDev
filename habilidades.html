@@ -22,69 +22,66 @@
           <i class="bi bi-x"></i>
         </button>
         <ul class="menu">
-          <a href="./quien-soy.html"><li>Quién soy</li></a>
-          <a href="./habilidades.html"><li>Habilidades</li></a>
-          <a href="./proyectos.html"><li>Proyectos</li></a>
-          <a href="./contacto.html"><li>Contacto</li></a>
+          <a href="./quien-soy.html"><li data-lang="nav-quien-soy" data-section="habilidades">Quién soy</li></a>
+          <a href="./habilidades.html"><li data-lang="nav-habilidades" data-section="habilidades">Habilidades</li></a>
+          <a href="./proyectos.html"><li data-lang="nav-proyectos" data-section="habilidades">Proyectos</li></a>
+          <a href="./contacto.html"><li data-lang="nav-contacto" data-section="habilidades">Contacto</li></a>
         </ul>
       </nav>
       <div class="logo">
         <a href="./index.html"><img src="./img/logo2.png" alt=""></a>
       </div>
+      <button id="lang-toggle" class="lang-toggle">EN</button>
     </header>
     
     <main>
       <section class="section-1">
-        <div id="typewriter" class="typewriter"></div>
+        <div id="typewriter" class="typewriter" data-lang="typewriter" data-section="habilidades"></div>
       </section>
 
       <section class="formacion-academica">
         <div class="fa-titulo" data-aos="fade-right">
-          <h3>Formación académica</h3>
+          <h3 data-lang="fa-titulo-h3" data-section="habilidades">Formación académica</h3>
         </div>
         <div class="fa-instituciones">
           <div class="inst-info" data-aos="fade-left">
             <figure class="inst-img">
               <img src="./img/logo-fadp.png" alt="">
             </figure>
-            
             <div class="inst-texto">
-              <h4>Fundación Academia de Dibujo Profesional</h4>
-              <p>Técnico Profesional en Diseño Gráfico</p>
-              <p><small>2010 | Cali, Colombia.</small></p>
+              <h4 data-lang="inst-texto-h4-1" data-section="habilidades">Fundación Academia de Dibujo Profesional</h4>
+              <p data-lang="inst-texto-p1-1" data-section="habilidades">Técnico Profesional en Diseño Gráfico</p>
+              <p><small data-lang="inst-texto-p2-1" data-section="habilidades">2010 | Cali, Colombia.</small></p>
             </div>
           </div>
           <div class="inst-info" data-aos="fade-left">
             <figure class="inst-img">
               <img src="./img/logo-UAN.png" alt="">
             </figure>
-            
             <div class="inst-texto">
-              <h4>Universidad Antonio Nariño - Sede Buga</h4>
-              <p>Profesional en Psicología</p>
-              <p><small>2017 | Buga, Colombia.</small></p>
+              <h4 data-lang="inst-texto-h4-2" data-section="habilidades">Universidad Antonio Nariño - Sede Buga</h4>
+              <p data-lang="inst-texto-p1-2" data-section="habilidades">Profesional en Psicología</p>
+              <p><small data-lang="inst-texto-p2-2" data-section="habilidades">2017 | Buga, Colombia.</small></p>
             </div>
           </div>
           <div class="inst-info" data-aos="fade-left">
             <figure class="inst-img">
               <img src="./img/logo-Platzi.png" alt="">
             </figure>
-            
             <div class="inst-texto">
-              <h4>Platzi SAS</h4>
-              <p>Desarrollo Web</p>
-              <p><small>2022 | On-line.</small></p>
+              <h4 data-lang="inst-texto-h4-3" data-section="habilidades">Platzi SAS</h4>
+              <p data-lang="inst-texto-p1-3" data-section="habilidades">Desarrollo Web</p>
+              <p><small data-lang="inst-texto-p2-3" data-section="habilidades">2022 | On-line.</small></p>
             </div>
           </div>
           <div class="inst-info" data-aos="fade-left">
             <figure class="inst-img">
               <img src="./img/logo-BIT.png" alt="">
             </figure>
-            
             <div class="inst-texto">
-              <h4>Bogotá Institute of Technology - BIT</h4>
-              <p>Bootcamp Desarrollo Web Fullstack</p>
-              <p><small>2024 | On-line.</small></p>
+              <h4 data-lang="inst-texto-h4-4" data-section="habilidades">Bogotá Institute of Technology - BIT</h4>
+              <p data-lang="inst-texto-p1-4" data-section="habilidades">Bootcamp Desarrollo Web Fullstack</p>
+              <p><small data-lang="inst-texto-p2-4" data-section="habilidades">2024 | On-line.</small></p>
             </div>
           </div>
         </div>
@@ -92,10 +89,9 @@
 
       <section class="skills-section">
         <div class="skills-container" id="skills">
-          <h2>Mis Habilidades</h2>
-          
+          <h2 data-lang="skills-container-h2" data-section="habilidades">Mis Habilidades</h2>
           <div class="skill corel">
-            <div class="skill-label">Corel Draw: 100%</div>
+            <div class="skill-label" data-lang="skill-label-corel" data-section="habilidades">Corel Draw: 100%</div>
             <div class="skill-w-image">
               <img src="./img/corel.png" alt="">
               <div class="skill-bar">
@@ -103,191 +99,162 @@
               </div>
             </div>
           </div>
-      
           <div class="skill illustrator">
-            <div class="skill-label">Illustrator: 50%</div>
+            <div class="skill-label" data-lang="skill-label-illustrator" data-section="habilidades">Illustrator: 80%</div>
             <div class="skill-w-image">
               <img src="./img/illustrator.png" alt="">
-            <div class="skill-bar">
-              <div class="bar-fill" data-animation="fillIllustrator 2s ease forwards"></div>
-            </div>  
+              <div class="skill-bar">
+                <div class="bar-fill" data-animation="fillIllustrator 2s ease forwards"></div>
+              </div>  
             </div>
-            
           </div>
-      
           <div class="skill photoshop">
-            <div class="skill-label">Photoshop: 50%</div>
+            <div class="skill-label" data-lang="skill-label-photoshop" data-section="habilidades">Photoshop: 70%</div>
             <div class="skill-w-image">
               <img src="./img/photoshop.png" alt="">
-            <div class="skill-bar">
-              <div class="bar-fill" data-animation="fillPhotoshop 2s ease forwards"></div>
-            </div>  
+              <div class="skill-bar">
+                <div class="bar-fill" data-animation="fillPhotoshop 2s ease forwards"></div>
+              </div>  
             </div>
-            
           </div>
-      
           <div class="skill filmora">
-            <div class="skill-label">Filmora: 80%</div>
+            <div class="skill-label" data-lang="skill-label-filmora" data-section="habilidades">Filmora: 80%</div>
             <div class="skill-w-image">
               <img src="./img/filmora.png" alt="">
-            <div class="skill-bar">
-              <div class="bar-fill" data-animation="fillFilmora 2s ease forwards"></div>
-            </div>  
+              <div class="skill-bar">
+                <div class="bar-fill" data-animation="fillFilmora 2s ease forwards"></div>
+              </div>  
             </div>
-            
           </div>
-      
           <div class="skill vsc">
-            <div class="skill-label">VSC: 70%</div>
+            <div class="skill-label" data-lang="skill-label-vsc" data-section="habilidades">VSC: 80%</div>
             <div class="skill-w-image">
               <img src="./img/vsc.png" alt="">
-            <div class="skill-bar">
-              <div class="bar-fill" data-animation="fillVSC 2s ease forwards"></div>
-            </div>  
+              <div class="skill-bar">
+                <div class="bar-fill" data-animation="fillVSC 2s ease forwards"></div>
+              </div>  
             </div>
-            
           </div>
         </div>
-
         <div class="tech-container" id="technologies">
-          <h2>Tecnologías</h2>
+          <h2 data-lang="tech-container-h2" data-section="habilidades">Tecnologías</h2>
           <div class="circle-chart">
-
             <div class="circle" data-percentage="90">
               <svg>
                 <circle class="bg" cx="60" cy="60" r="50" />
                 <circle class="progress" cx="60" cy="60" r="50" />
               </svg>
               <img class="logo" src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Logo">
-              <div class="circle-name">HTML - 90%</div>
+              <div class="circle-name" data-lang="circle-name-html" data-section="habilidades">HTML - 90%</div>
             </div>
-      
             <div class="circle" data-percentage="80">
               <svg>
                 <circle class="bg" cx="60" cy="60" r="50" />
                 <circle class="progress" cx="60" cy="60" r="50" />
               </svg>
               <img class="logo" src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Logo">
-              <div class="circle-name">CSS - 80%</div>
+              <div class="circle-name" data-lang="circle-name-css" data-section="habilidades">CSS - 80%</div>
             </div>
-      
             <div class="circle" data-percentage="60">
               <svg>
                 <circle class="bg" cx="60" cy="60" r="50" />
                 <circle class="progress" cx="60" cy="60" r="50" />
               </svg>
               <img class="logo" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Logo">
-              <div class="circle-name">JavaScript - 60%</div>
+              <div class="circle-name" data-lang="circle-name-js" data-section="habilidades">JavaScript - 60%</div>
             </div>
-      
             <div class="circle" data-percentage="50">
               <svg>
                 <circle class="bg" cx="60" cy="60" r="50" />
                 <circle class="progress" cx="60" cy="60" r="50" />
               </svg>
               <img class="logo" src="https://www.svgrepo.com/show/331488/mongodb.svg" alt="MongoDB Logo">
-              <div class="circle-name">MongoDB - 50%</div>
+              <div class="circle-name" data-lang="circle-name-mongodb" data-section="habilidades">MongoDB - 50%</div>
             </div>
-      
             <div class="circle" data-percentage="50">
               <svg>
                 <circle class="bg" cx="60" cy="60" r="50" />
                 <circle class="progress" cx="60" cy="60" r="50" />
               </svg>
               <img class="logo" src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular Logo">
-              <div class="circle-name">Angular - 50%</div>
+              <div class="circle-name" data-lang="circle-name-angular" data-section="habilidades">Angular - 50%</div>
             </div>
-      
             <div class="circle" data-percentage="50">
               <svg>
                 <circle class="bg" cx="60" cy="60" r="50" />
                 <circle class="progress" cx="60" cy="60" r="50" />
               </svg>
               <img class="logo" src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node JS Logo">
-              <div class="circle-name">Node JS - 50%</div>
+              <div class="circle-name" data-lang="circle-name-nodejs" data-section="habilidades">Node JS - 50%</div>
             </div>
-      
             <div class="circle" data-percentage="80">
               <svg>
                 <circle class="bg" cx="60" cy="60" r="50" />
                 <circle class="progress" cx="60" cy="60" r="50" />
               </svg>
               <img class="logo" src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Figma Logo">
-              <div class="circle-name">Figma - 80%</div>
+              <div class="circle-name" data-lang="circle-name-figma" data-section="habilidades">Figma - 80%</div>
             </div>
           </div>
         </div>
-
       </section>
 
       <section class="specialities">
-
         <div class="spec-title" data-aos="fade-right">
-          <h2>Mis especialidades</h2>
+          <h2 data-lang="spec-title-h2" data-section="habilidades">Mis especialidades</h2>
         </div>
-
         <div class="spec-icons">
-          
-          <div class="spec-icon" div data-aos="flip-left">
+          <div class="spec-icon" data-aos="flip-left">
             <figure class="spec-img">
               <img src="./img/logo-design.svg" alt="">
             </figure>
             <div class="spec-text">
-              <p>Diseño de logos</p>
+              <p data-lang="spec-text-p1" data-section="habilidades">Diseño de logos</p>
             </div>
           </div>
-  
-          <div class="spec-icon" div data-aos="flip-left">
+          <div class="spec-icon" data-aos="flip-left">
             <figure class="spec-img">
               <img src="./img/print-design.svg" alt="">
             </figure>
             <div class="spec-text">
-              <p>Diseño litográfico</p>
+              <p data-lang="spec-text-p2" data-section="habilidades">Diseño litográfico</p>
             </div>
           </div>
-  
-          <div class="spec-icon" div data-aos="flip-left">
+          <div class="spec-icon" data-aos="flip-left">
             <figure class="spec-img">
               <img src="./img/digital-design.svg" alt="">
             </figure>
             <div class="spec-text">
-              <p>Diseño digital</p>
+              <p data-lang="spec-text-p3" data-section="habilidades">Diseño digital</p>
             </div>
           </div>
-  
-          <div class="spec-icon" div data-aos="flip-left">
+          <div class="spec-icon" data-aos="flip-left">
             <figure class="spec-img">
               <img src="./img/web-layout.svg" alt="">
             </figure>
             <div class="spec-text">
-              <p>Maquetación web</p>
+              <p data-lang="spec-text-p4" data-section="habilidades">Maquetación web</p>
             </div>
           </div>
-
         </div>
-        
-
-        <section class="languages" data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom">
-          <h2>Idiomas</h2>
+        <section class="languages" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+          <h2 data-lang="languages-h2" data-section="habilidades">Idiomas</h2>
           <div class="languages-list">
             <div class="language">
               <figure>
                 <img src="./img/us-flag.png" alt="">
               </figure>
-              <p>Inglés - C1</p>
+              <p data-lang="language-p1" data-section="habilidades">Inglés - C1</p>
             </div>
             <div class="language">
               <figure>
                 <img src="./img/fr-flag.png" alt="">
               </figure>
-              <p>Francés - A1</p>
+              <p data-lang="language-p2" data-section="habilidades">Francés - A1</p>
             </div>
           </div>
         </section>
       </section>
-      
-
     </main>
     
     <footer class="footer">
@@ -295,15 +262,13 @@
         <img src="./img/logo2.png" alt="">
       </section>
       <section class="footer-info">
-        <div class="info-left">
-          CeDev © 2024 | Todos los derechos reservados.
-        </div>
+        <div class="info-left" data-lang="footer-info-left" data-section="habilidades">CeDev © 2024 | Todos los derechos reservados.</div>
         <div class="center">
           <ul class="footer-menu">
-            <a href="./quien-soy.html"><li>Quién soy</li></a>
-            <a href="./habilidades.html"><li>Habilidades</li></a>
-            <a href="./proyectos.html"><li>Proyectos</li></a>
-            <a href="./contacto.html"><li>Contacto</li></a>
+            <a href="./quien-soy.html"><li data-lang="footer-menu-quien-soy" data-section="habilidades">Quién soy</li></a>
+            <a href="./habilidades.html"><li data-lang="footer-menu-habilidades" data-section="habilidades">Habilidades</li></a>
+            <a href="./proyectos.html"><li data-lang="footer-menu-proyectos" data-section="habilidades">Proyectos</li></a>
+            <a href="./contacto.html"><li data-lang="footer-menu-contacto" data-section="habilidades">Contacto</li></a>
           </ul>
         </div>
         <div class="info-right">
@@ -318,8 +283,8 @@
     
   </div>
 
-
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/language.js"></script>
   <script src="./js/main.js"></script>
   <script>
     AOS.init();
