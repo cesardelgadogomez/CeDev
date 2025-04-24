@@ -4,11 +4,21 @@ let currentLang = localStorage.getItem('language') || 'es';
 
 async function loadTranslations() {
   try {
-    const response = await fetch('../translations.json');
+    // Intentar cargar desde la raíz o desde /data/
+    const response = await fetch('/data/translations.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     translations = await response.json();
+    console.log('Translations loaded:', translations); // Depuración
     setLanguage(currentLang);
   } catch (error) {
     console.error('Error loading translations:', error);
+    // Mostrar mensaje en la UI para depuración
+    const typewriter = document.getElementById('typewriter');
+    if (typewriter) {
+      typewriter.textContent = 'Error loading translations. Please check the console.';
+    }
   }
 }
 
