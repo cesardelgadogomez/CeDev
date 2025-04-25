@@ -234,11 +234,11 @@ let translations = {
       "explora-habilidades-p": "Would you like to see a detailed overview of my competencies, skills, and abilities? Or perhaps you’d prefer to see a sample of my work as a graphic designer and web developer? Don’t hesitate to explore these sections to convince yourself of my work. :D",
       "explora-botones-h3-1": "Go to Skills",
       "explora-botones-h3-2": "Go to Projects",
-      "footer-info-left": "CeDev © 2024 | Todos los derechos reservados.",
-      "footer-menu-quien-soy": "Quién soy",
-      "footer-menu-habilidades": "Habilidades",
-      "footer-menu-proyectos": "Proyectos",
-      "footer-menu-contacto": "Contacto"
+      "footer-info-left": "CeDev © 2024 | All rights reserved.",
+      "footer-menu-quien-soy": "Who am I?",
+      "footer-menu-habilidades": "Skills",
+      "footer-menu-proyectos": "Projects",
+      "footer-menu-contacto": "Contact"
     },
     "habilidades": {
       "nav-quien-soy": "Who am I?",
@@ -281,7 +281,7 @@ let translations = {
       "languages-h2": "Languages",
       "language-p1": "English - C1",
       "language-p2": "French - A1",
-      "footer-info-left": "CeDev © 2024 | Todos los derechos reservados.",
+      "footer-info-left": "CeDev © 2024 | All rights reserved.",
       "footer-menu-quien-soy": "Who am I?",
       "footer-menu-habilidades": "Skills",
       "footer-menu-proyectos": "Projects",
@@ -357,7 +357,7 @@ let translations = {
       "lightbox-web-5-p": "E-commerce web project with functional registration and login, integrating a MongoDB backend and hosted on a Digital Ocean server with a real domain.",
       "lightbox-web-5-p2": "Click here to view the page",
       "lightbox-web-5-p3": "(Opens in a new tab)",
-      "footer-info-left": "CeDev © 2024 | Todos los derechos reservados.",
+      "footer-info-left": "CeDev © 2024 | All rights reserved.",
       "footer-menu-quien-soy": "Who am I?",
       "footer-menu-habilidades": "Skills",
       "footer-menu-proyectos": "Projects",
@@ -379,7 +379,7 @@ let translations = {
       "form-tema-option-3": "Other",
       "form-mensaje-placeholder": "Write something...",
       "form-boton": "Send",
-      "footer-info-left": "CeDev © 2024 | Todos los derechos reservados.",
+      "footer-info-left": "CeDev © 2024 | All rights reserved.",
       "footer-menu-quien-soy": "Who am I?",
       "footer-menu-habilidades": "Skills",
       "footer-menu-proyectos": "Projects",
@@ -401,7 +401,12 @@ function setLanguage(lang) {
     const key = element.getAttribute('data-lang');
     const section = element.getAttribute('data-section');
     if (translations[lang] && translations[lang][section] && translations[lang][section][key]) {
-      element.innerHTML = translations[lang][section][key];
+      if (element.id === 'typewriter') {
+        // Almacenar el texto en data-current-translation en lugar de innerHTML
+        element.setAttribute('data-current-translation', translations[lang][section][key]);
+      } else {
+        element.innerHTML = translations[lang][section][key];
+      }
     }
   });
 
@@ -434,6 +439,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setLanguage(currentLang);
   const langButton = document.getElementById('lang-toggle');
   if (langButton) {
-    langButton.addEventListener('click', toggleLanguage);
+    langButton.addEventListener('click', () => {
+      console.log('lang-toggle clicked'); // Depuración
+      toggleLanguage();
+    });
   }
 });

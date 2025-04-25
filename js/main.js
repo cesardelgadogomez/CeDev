@@ -20,39 +20,50 @@ document.addEventListener('DOMContentLoaded', () => {
   const typewriter = document.getElementById('typewriter');
   if (!typewriter) return;
 
+  let typeTimeout = null; // Variable para rastrear el setTimeout
+
+  // Función para ejecutar el efecto typewriter
   function startTypewriter(text) {
-    typewriter.textContent = '';
-    typewriter.classList.add('active');
+    // Limpiar cualquier animación en curso
+    if (typeTimeout) {
+      clearTimeout(typeTimeout);
+      typeTimeout = null;
+    }
+
+    typewriter.textContent = ''; // Limpiar contenido inicial
+    typewriter.classList.add('active'); // Hacer visible el elemento
     let index = 0;
 
     function typeEffect() {
       if (index < text.length) {
         typewriter.textContent += text[index];
         index++;
-        setTimeout(typeEffect, 90);
+        typeTimeout = setTimeout(typeEffect, 90);
       }
     }
 
     typeEffect();
   }
 
+  // Ejecutar el efecto typewriter al cargar la página
   setTimeout(() => {
-    const text = typewriter.textContent || typewriter.getAttribute('data-current-translation') || '';
+    const text = typewriter.getAttribute('data-current-translation') || typewriter.textContent || '';
     startTypewriter(text);
-  }, 200);
+  }, 100); // Reducido a 100ms para sincronización más rápida
 
+  // Escuchar cambios de idioma
   const langToggle = document.getElementById('lang-toggle');
   if (langToggle) {
     langToggle.addEventListener('click', () => {
-      // No limpiar el contenido, confiar en language.js para actualizar el texto
+      typewriter.classList.remove('active'); // Ocultar inmediatamente
       setTimeout(() => {
-        typewriter.classList.add('active');
-        // El texto ya es actualizado por language.js vía data-lang
-      }, 200);
+        // Obtener el nuevo texto desde data-current-translation
+        const newText = typewriter.getAttribute('data-current-translation') || typewriter.textContent || '';
+        startTypewriter(newText); // Reiniciar el typewriter
+      }, 50); // Reducido a 50ms para minimizar el retraso
     });
   }
 });
-
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
