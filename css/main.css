@@ -1177,7 +1177,7 @@ details[open] summary::marker {
 
 .contenedor-web {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 20px;
   width: 90%;
   padding: 2rem;
@@ -1319,27 +1319,32 @@ details[open] summary::marker {
 }
 
 
-/* CONTENEDOR EDITORIAL */
+/* CONTENEDOR WEB */
 
 .contenedor-web:has(.one:hover) {
-  grid-template-columns: 1.5fr .5fr .5fr .5fr .5fr;
+  grid-template-columns: 1.5fr .5fr .5fr .5fr .5fr .5fr;
 }
 
 .contenedor-web:has(.two:hover) {
-  grid-template-columns: .5fr 1.5fr .5fr .5fr .5fr;
+  grid-template-columns: .5fr 1.5fr .5fr .5fr .5fr .5fr;
 }
 
 .contenedor-web:has(.three:hover) {
-  grid-template-columns: .5fr .5fr 1.5fr .5fr .5fr;
+  grid-template-columns: .5fr .5fr 1.5fr .5fr .5fr .5fr;
 }
 
 .contenedor-web:has(.four:hover) {
-  grid-template-columns: .5fr .5fr .5fr 1.5fr .5fr;
+  grid-template-columns: .5fr .5fr .5fr 1.5fr .5fr .5fr;
 }
 
 .contenedor-web:has(.five:hover) {
-  grid-template-columns: .5fr .5fr .5fr .5fr 1.5fr;
+  grid-template-columns: .5fr .5fr .5fr .5fr 1.5fr .5fr;
 }
+
+.contenedor-web:has(.six:hover) {
+  grid-template-columns: .5fr .5fr .5fr .5fr .5fr 1.5fr;
+}
+
 
 
 
@@ -2010,7 +2015,7 @@ details[open] summary::marker {
   
   .contenedor-web {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 80%;
     height: fit-content;
   }
@@ -2160,27 +2165,32 @@ details[open] summary::marker {
   
   .contenedor-web:has(.one:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr .5fr .5fr .5fr .5fr;
+    grid-template-rows: 2fr .5fr .5fr .5fr .5fr .5fr;
   }
   
   .contenedor-web:has(.two:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr 2fr .5fr .5fr .5fr;
+    grid-template-rows: .5fr 2fr .5fr .5fr .5fr .5fr;
   }
   
   .contenedor-web:has(.three:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr .5fr 2fr .5fr .5fr;
+    grid-template-rows: .5fr .5fr 2fr .5fr .5fr .5fr;
   }
   
   .contenedor-web:has(.four:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr .5fr .5fr 2fr .5fr;
+    grid-template-rows: .5fr .5fr .5fr 2fr .5fr .5fr;
   }
   
   .contenedor-web:has(.five:hover) {
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr .5fr .5fr .5fr 2fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr 2fr .5fr;
+  }
+
+  .contenedor-web:has(.six:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr 2fr;
   }
   
   .imagen img {
