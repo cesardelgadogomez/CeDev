@@ -920,6 +920,11 @@ details[open] summary::marker {
   to { width: 70%; }
 }
 
+@keyframes fillwix {
+  from { width: 0; }
+  to { width: 85%; }
+}
+
 .tech-container {
   width: 40%;
   max-width: 800px;
